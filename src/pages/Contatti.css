@@ -1,0 +1,34 @@
+#map {
+    height: 100px;
+    width: 100%;
+}
+
+.contact-header {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-header h2 {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+ul li i {
+    margin-right: 0.5rem;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    margin-top: 1rem;
+}

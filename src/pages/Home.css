@@ -1,0 +1,268 @@
+/* Stili specifici per la pagina Home */
+#home {
+    padding: 3rem 1.5rem;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+#home h2 {
+    font-size: 2.2rem;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+#home p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2.2rem;
+}
+
+/* Stili per le sezioni dei servizi */
+.service-section {
+    padding: 3rem 1.5rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.service-section.reverse {
+    background-color: #f8f8f8;
+}
+
+.service-section .content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.service-section .text {
+    margin-top: 1.5rem;
+}
+
+.service-section h2 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.service-section p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Stili per il carosello personalizzato */
+.custom-carousel-unique {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 700px;
+    margin: 25px auto;
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.custom-carousel-track-unique {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.custom-carousel-item-unique {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.custom-carousel-item-unique img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Altezza massima ridotta per rendere le immagini più piccole */
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.custom-carousel-control-unique {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.custom-carousel-control-prev-unique {
+    left: 10px;
+}
+
+.custom-carousel-control-next-unique {
+    right: 10px;
+}
+
+
+
+
+
+/* Stili per Recent Works */
+#recent-works {
+    padding: 3rem 1.5rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#recent-works h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.7rem;
+    color: #222;
+}
+
+#recent-works .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+#recent-works img {
+    width: calc(25% - 1.5rem); /* Ridotto dal 30% al 25% */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* FAQ Stili */
+#faq .card {
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+}
+
+#faq .card-header {
+    background-color: transparent;
+}
+
+#faq .btn-link {
+    color: #0056b3;
+    font-size: 1.3rem;
+}
+
+/* Newsletter Stili */
+#newsletter {
+    background-color: #34495e;
+    color: #fff;
+    padding: 3.5rem 2rem;
+    text-align: center;
+}
+
+#newsletter h2 {
+    margin-bottom: 1.7rem;
+    font-size: 2.2rem;
+}
+
+#newsletter .form-control {
+    border-radius: 30px;
+    padding: 0.85rem;
+}
+
+#newsletter .btn {
+    border-radius: 30px;
+    padding: 0.85rem 2.5rem;
+}
+
+/* Testimonials Slider */
+#testimonials-slider .carousel-inner {
+    text-align: center;
+    font-style: italic;
+}
+
+#testimonials-slider p {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+/* Stats Section */
+#stats .stat {
+    padding: 1.7rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2.5rem;
+}
+
+#stats h3 {
+    font-size: 2.2rem;
+    color: #222;
+    margin-bottom: 0.6rem;
+}
+
+#stats p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Quick Contacts */
+#quick-contacts .whatsapp-link img {
+    width: 55px;
+    height: 55px;
+    transition: transform 0.3s ease;
+}
+
+#quick-contacts .whatsapp-link img:hover {
+    transform: scale(1.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-section {
+        padding: 2rem 1rem;
+    }
+
+    .service-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .service-section p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .custom-carousel-unique {
+        max-width: 100%;
+    }
+
+    .custom-carousel-item-unique img {
+        max-height: 200px; /* Altezza massima per dispositivi mobili */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-section {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .service-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .service-section p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .custom-carousel-unique {
+        max-width: 100%;
+    }
+
+    .custom-carousel-item-unique img {
+        max-height: 180px; /* Altezza massima per dispositivi molto piccoli */
+    }
+}
