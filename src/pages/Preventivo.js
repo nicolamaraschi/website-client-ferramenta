@@ -82,7 +82,7 @@ const Preventivo = () => {
                             id="telefono"
                             name="telefono"
                             pattern="^[+]?[0-9\s]*$"
-                            placeholder="es: +39 123 456 7890"
+                            placeholder="es: +39 123 456 789"
                         />
                         <div className="invalid-feedback">Inserisci un numero di telefono valido (solo numeri e spazi, opzionale).</div>
                     </div>
@@ -155,7 +155,7 @@ const Preventivo = () => {
                                 required
                             />
                             <label className="form-check-label" htmlFor="privacy">
-                                Accetto la <a href="#">privacy policy</a> *
+                                Accetto la <a href="https://tuo-sito.com/privacy-policy" target="_blank" rel="noopener noreferrer">privacy policy</a> *
                             </label>
                             <div className="invalid-feedback">Devi accettare la privacy policy per inviare il modulo.</div>
                         </div>

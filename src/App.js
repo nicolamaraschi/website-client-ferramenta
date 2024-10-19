@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -14,6 +14,8 @@ const App = () => {
       <Navbar />
       <main>
         <Routes>
+          {/* Reindirizza da '/' a '/main' */}
+          <Route path="/" element={<Navigate to="/main" />} />
           <Route path="/main" element={<Home />} />
           <Route path="/contatti" element={<Contatti />} />
           <Route path="/preventivo" element={<Preventivo />} />

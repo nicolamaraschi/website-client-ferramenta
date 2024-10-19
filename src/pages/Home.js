@@ -103,173 +103,164 @@ const Home = () => {
 
 
            
-            <section class="service-section">
-                <div class="content">
-                    <div class="custom-carousel-unique" id="carousel1">
-                        <div class="custom-carousel-track-unique">
-                            <div class="custom-carousel-item-unique">
-                                <img src="serramenti.webp" alt="Serramenti di Sicurezza 1" />
-                            </div>
-                            <div class="custom-carousel-item-unique">
-                                <img src="serramenti.webp" alt="Serramenti di Sicurezza 2" />
-                            </div>
-                            <div class="custom-carousel-item-unique">
-                                <img src="serramenti.webp" alt="Serramenti di Sicurezza 3" />
-                            </div>
-                        </div>
-                        <button class="custom-carousel-control-unique custom-carousel-control-prev-unique" data-target="#carousel1">‹</button>
-                        <button class="custom-carousel-control-unique custom-carousel-control-next-unique" data-target="#carousel1">›</button>
-                    </div>
-                    <div class="text">
-                        <h2>Serramenti di Sicurezza</h2>
-                        <p>Soluzioni anche automatizzate per garantire la massima sicurezza della tua casa o azienda.</p>
-                    </div>
+            <section className="service-section">
+    <div className="content">
+        <div className="custom-carousel-unique" id="carousel1">
+            <div className="custom-carousel-track-unique">
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/serramenti.webp`} alt="Serramenti di Sicurezza 1" />
                 </div>
-            </section>
-
-
-            <section class="service-section reverse">
-                <div class="content">
-                    <div class="custom-carousel-unique" id="carousel2">
-                        <div class="custom-carousel-track-unique">
-                            <div class="custom-carousel-item-unique">
-                                <img src="portaBlindata.webp" alt="Porte Blindate 1" />
-                            </div>
-                            <div class="custom-carousel-item-unique">
-                                <img src="portaBlindata.webp" alt="Porte Blindate 2" />
-                            </div>
-                            <div class="custom-carousel-item-unique">
-                                <img src="portaBlindata.webp" alt="Porte Blindate 3" />
-                            </div>
-                        </div>
-                        <button class="custom-carousel-control-unique custom-carousel-control-prev-unique" data-target="#carousel2">‹</button>
-                        <button class="custom-carousel-control-unique custom-carousel-control-next-unique" data-target="#carousel2">›</button>
-                    </div>
-                    <div class="text">
-                        <h2>Porte Blindate</h2>
-                        <p>Offriamo porte blindate di alta qualità per proteggere i tuoi spazi con stile e sicurezza.</p>
-                    </div>
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/serramenti.webp`} alt="Serramenti di Sicurezza 2" />
                 </div>
-            </section>
-
-
-            <section class="service-section">
-                <div class="content">
-                    <div class="custom-carousel-unique" id="carousel3">
-                        <div class="custom-carousel-track-unique">
-                            <div class="custom-carousel-item-unique">
-                                <img src="inferiata.jpeg" alt="Inferriate di Sicurezza 1" />
-                            </div>
-                            <div class="custom-carousel-item-unique">
-                                <img src="inferiata.jpeg" alt="Inferriate di Sicurezza 2" />
-                            </div>
-                            <div class="custom-carousel-item-unique">
-                                <img src="inferiata.jpeg" alt="Inferriate di Sicurezza 3" />
-                            </div>
-                        </div>
-                        <button class="custom-carousel-control-unique custom-carousel-control-prev-unique" data-target="#carousel3">‹</button>
-                        <button class="custom-carousel-control-unique custom-carousel-control-next-unique" data-target="#carousel3">›</button>
-                    </div>
-                    <div class="text">
-                        <h2>Inferriate di Sicurezza</h2>
-                        <p>Inferriate robuste e affidabili per una protezione efficace contro le intrusioni.</p>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="service-section reverse">
-                <div class="content">
-                    <div class="custom-carousel-unique" id="carousel4">
-                        <div class="custom-carousel-track-unique">
-                            <div class="custom-carousel-item-unique">
-                                <img src="Cancelli.jpeg" alt="Cancelli e Recinzioni 1" />
-                            </div>
-                            <div class="custom-carousel-item-unique">
-                                <img src="Cancelli.jpeg" alt="Cancelli e Recinzioni 2" />
-                            </div>
-                            <div class="custom-carousel-item-unique">
-                                <img src="Cancelli.jpeg" alt="Cancelli e Recinzioni 3" />
-                            </div>
-                        </div>
-                        <button class="custom-carousel-control-unique custom-carousel-control-prev-unique" data-target="#carousel4">‹</button>
-                        <button class="custom-carousel-control-unique custom-carousel-control-next-unique" data-target="#carousel4">›</button>
-                    </div>
-                    <div class="text">
-                        <h2>Cancelli e Recinzioni</h2>
-                        <p>Cancelli e recinzioni personalizzate per delimitare e proteggere le tue proprietà.</p>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="service-section">
-                <div class="content">
-                    <div class="custom-carousel-unique" id="carousel5">
-                        <div class="custom-carousel-track-unique">
-                            <div class="custom-carousel-item-unique">
-                                <img src="tapparelle.jpg" alt="Apparelle e Persiane Blindate 1" />
-                            </div>
-                            <div class="custom-carousel-item-unique">
-                                <img src="tapparelle.jpg" alt="Apparelle e Persiane Blindate 2" />
-                            </div>
-                            <div class="custom-carousel-item-unique">
-                                <img src="tapparelle.jpg" alt="Apparelle e Persiane Blindate 3" />
-                            </div>
-                        </div>
-                        <button class="custom-carousel-control-unique custom-carousel-control-prev-unique" data-target="#carousel5">‹</button>
-                        <button class="custom-carousel-control-unique custom-carousel-control-next-unique" data-target="#carousel5">›</button>
-                    </div>
-                    <div class="text">
-                        <h2>Apparelle e Persiane Blindate</h2>
-                        <p>Soluzioni blindate per finestre che uniscono sicurezza e funzionalità.</p>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="service-section reverse">
-                <div class="content">
-                    <div class="custom-carousel-unique" id="carousel6">
-                        <div class="custom-carousel-track-unique">
-                            <div class="custom-carousel-item-unique">
-                                <img src="serranda.webp" alt="Serrande e Basculanti 1" />
-                            </div>
-                            <div class="custom-carousel-item-unique">
-                                <img src="serranda.webp" alt="Serrande e Basculanti 2" />
-                            </div>
-                            <div class="custom-carousel-item-unique">
-                                <img src="serranda.webp" alt="Serrande e Basculanti 3" />
-                            </div>
-                        </div>
-                        <button class="custom-carousel-control-unique custom-carousel-control-prev-unique" data-target="#carousel6">‹</button>
-                        <button class="custom-carousel-control-unique custom-carousel-control-next-unique" data-target="#carousel6">›</button>
-                    </div>
-                    <div class="text">
-                        <h2>Serrande e Basculanti</h2>
-                        <p>Installazione e manutenzione di serrande e basculanti per garage e spazi commerciali.</p>
-                    </div>
-                </div>
-            </section>
-
-
-
-
-                    {/* Sezione Recenti Lavori */}
-        <section id="recent-works">
-            <div className="container">
-                <h2>I Nostri Recenti Lavori</h2>
-                <div className="gallery">
-                    <img src="/Cancelli.jpeg" alt="Lavoro 1" />
-                    <img src="/portaBlindata.webp" alt="Lavoro 2" />
-                    <img src="/serramenti.webp" alt="Lavoro 3" />
-                    <img src="/tapparelle.jpg" alt="Lavoro 4" />
-                    <img src="/inferiata.jpeg" alt="Lavoro 5" />
-                    <img src="/serranda.webp" alt="Lavoro 6" />
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/serramenti.webp`} alt="Serramenti di Sicurezza 3" />
                 </div>
             </div>
-        </section>
+            <button className="custom-carousel-control-unique custom-carousel-control-prev-unique" data-target="#carousel1">‹</button>
+            <button className="custom-carousel-control-unique custom-carousel-control-next-unique" data-target="#carousel1">›</button>
+        </div>
+        <div className="text">
+            <h2>Serramenti di Sicurezza</h2>
+            <p>Soluzioni anche automatizzate per garantire la massima sicurezza della tua casa o azienda.</p>
+        </div>
+    </div>
+</section>
 
+<section className="service-section reverse">
+    <div className="content">
+        <div className="custom-carousel-unique" id="carousel2">
+            <div className="custom-carousel-track-unique">
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/portaBlindata.webp`} alt="Porte Blindate 1" />
+                </div>
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/portaBlindata.webp`} alt="Porte Blindate 2" />
+                </div>
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/portaBlindata.webp`} alt="Porte Blindate 3" />
+                </div>
+            </div>
+            <button className="custom-carousel-control-unique custom-carousel-control-prev-unique" data-target="#carousel2">‹</button>
+            <button className="custom-carousel-control-unique custom-carousel-control-next-unique" data-target="#carousel2">›</button>
+        </div>
+        <div className="text">
+            <h2>Porte Blindate</h2>
+            <p>Offriamo porte blindate di alta qualità per proteggere i tuoi spazi con stile e sicurezza.</p>
+        </div>
+    </div>
+</section>
+
+<section className="service-section">
+    <div className="content">
+        <div className="custom-carousel-unique" id="carousel3">
+            <div className="custom-carousel-track-unique">
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/inferiata.jpeg`} alt="Inferriate di Sicurezza 1" />
+                </div>
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/inferiata.jpeg`} alt="Inferriate di Sicurezza 2" />
+                </div>
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/inferiata.jpeg`} alt="Inferriate di Sicurezza 3" />
+                </div>
+            </div>
+            <button className="custom-carousel-control-unique custom-carousel-control-prev-unique" data-target="#carousel3">‹</button>
+            <button className="custom-carousel-control-unique custom-carousel-control-next-unique" data-target="#carousel3">›</button>
+        </div>
+        <div className="text">
+            <h2>Inferriate di Sicurezza</h2>
+            <p>Inferriate robuste e affidabili per una protezione efficace contro le intrusioni.</p>
+        </div>
+    </div>
+</section>
+
+<section className="service-section reverse">
+    <div className="content">
+        <div className="custom-carousel-unique" id="carousel4">
+            <div className="custom-carousel-track-unique">
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/Cancelli.jpeg`} alt="Cancelli e Recinzioni 1" />
+                </div>
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/Cancelli.jpeg`} alt="Cancelli e Recinzioni 2" />
+                </div>
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/Cancelli.jpeg`} alt="Cancelli e Recinzioni 3" />
+                </div>
+            </div>
+            <button className="custom-carousel-control-unique custom-carousel-control-prev-unique" data-target="#carousel4">‹</button>
+            <button className="custom-carousel-control-unique custom-carousel-control-next-unique" data-target="#carousel4">›</button>
+        </div>
+        <div className="text">
+            <h2>Cancelli e Recinzioni</h2>
+            <p>Cancelli e recinzioni personalizzate per delimitare e proteggere le tue proprietà.</p>
+        </div>
+    </div>
+</section>
+
+<section className="service-section">
+    <div className="content">
+        <div className="custom-carousel-unique" id="carousel5">
+            <div className="custom-carousel-track-unique">
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/tapparelle.jpg`} alt="Apparelle e Persiane Blindate 1" />
+                </div>
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/tapparelle.jpg`} alt="Apparelle e Persiane Blindate 2" />
+                </div>
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/tapparelle.jpg`} alt="Apparelle e Persiane Blindate 3" />
+                </div>
+            </div>
+            <button className="custom-carousel-control-unique custom-carousel-control-prev-unique" data-target="#carousel5">‹</button>
+            <button className="custom-carousel-control-unique custom-carousel-control-next-unique" data-target="#carousel5">›</button>
+        </div>
+        <div className="text">
+            <h2>Apparelle e Persiane Blindate</h2>
+            <p>Soluzioni blindate per finestre che uniscono sicurezza e funzionalità.</p>
+        </div>
+    </div>
+</section>
+
+<section className="service-section reverse">
+    <div className="content">
+        <div className="custom-carousel-unique" id="carousel6">
+            <div className="custom-carousel-track-unique">
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/serranda.webp`} alt="Serrande e Basculanti 1" />
+                </div>
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/serranda.webp`} alt="Serrande e Basculanti 2" />
+                </div>
+                <div className="custom-carousel-item-unique">
+                    <img src={`${process.env.PUBLIC_URL}/images/serranda.webp`} alt="Serrande e Basculanti 3" />
+                </div>
+            </div>
+            <button className="custom-carousel-control-unique custom-carousel-control-prev-unique" data-target="#carousel6">‹</button>
+            <button className="custom-carousel-control-unique custom-carousel-control-next-unique" data-target="#carousel6">›</button>
+        </div>
+        <div className="text">
+            <h2>Serrande e Basculanti</h2>
+            <p>Installazione e manutenzione di serrande e basculanti per garage e spazi commerciali.</p>
+        </div>
+    </div>
+</section>
+
+{/* Sezione Recenti Lavori */}
+<section id="recent-works">
+    <div className="container">
+        <h2>I Nostri Recenti Lavori</h2>
+        <div className="gallery">
+            <img src={`${process.env.PUBLIC_URL}/images/Cancelli.jpeg`} alt="Lavoro 1" />
+            <img src={`${process.env.PUBLIC_URL}/images/portaBlindata.webp`} alt="Lavoro 2" />
+            <img src={`${process.env.PUBLIC_URL}/images/serramenti.webp`} alt="Lavoro 3" />
+            <img src={`${process.env.PUBLIC_URL}/images/tapparelle.jpg`} alt="Lavoro 4" />
+            <img src={`${process.env.PUBLIC_URL}/images/inferiata.jpeg`} alt="Lavoro 5" />
+            <img src={`${process.env.PUBLIC_URL}/images/serranda.webp`} alt="Lavoro 6" />
+        </div>
+    </div>
+</section>
 
             {/* Sezione FAQ */}
             <section id="faq" className="bg-light py-5">

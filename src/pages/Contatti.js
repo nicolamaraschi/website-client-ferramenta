@@ -16,6 +16,7 @@ const Contatti = () => {
 
   return (
     <div>
+
       {/* Sezione Contatti */}
       <section id="contatti" className="mt-5">
         <div className="contact-header text-center">
@@ -23,11 +24,11 @@ const Contatti = () => {
         </div>
         <div className="container">
           <div className="row">
-            {/* Primo box: Mappa */}
+            
             <div className="col-md-4 mb-3">
               <h3>Dove Siamo</h3>
               <LoadScript
-                googleMapsApiKey="YOUR_API_KEY" // Inserisci qui la tua API Key
+                // googleMapsApiKey="YOUR_API_KEY"  Inserisci qui la tua API Key
               >
                 <GoogleMap
                   mapContainerStyle={containerStyle}
