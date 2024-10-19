@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/website-client-ferramenta/static/css/main.7bbf5005.css",
+    "main.js": "/website-client-ferramenta/static/js/main.a5410e89.js",
+    "static/js/453.d3685328.chunk.js": "/website-client-ferramenta/static/js/453.d3685328.chunk.js",
+    "index.html": "/website-client-ferramenta/index.html",
+    "main.7bbf5005.css.map": "/website-client-ferramenta/static/css/main.7bbf5005.css.map",
+    "main.a5410e89.js.map": "/website-client-ferramenta/static/js/main.a5410e89.js.map",
+    "453.d3685328.chunk.js.map": "/website-client-ferramenta/static/js/453.d3685328.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7bbf5005.css",
+    "static/js/main.a5410e89.js"
+  ]
+}
