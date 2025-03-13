@@ -1,72 +1,344 @@
-/* Navbar CSS */
-nav {
-    background-color: #333;
-    padding: 0.5rem 1rem;
-    
+/* Navbar CSS Elegante con Fix per Mobile */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+.navbar-luxury {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 25px 0;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-color: rgba(255, 255, 255, 0.8); /* Sfondo leggero per default */
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-.navbar-brand {
-    color: white;
-    font-size: 1.5rem;
+.navbar-luxury.scrolled {
+  padding: 15px 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.navbar-brand:hover {
-    color: #ddd;
+.navbar-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Importante per posizionamento menu mobile */
 }
 
-.navbar-nav {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    justify-content: space-around;
+/* Logo styling */
+.navbar-logo {
+  font-family: 'Cinzel', serif;
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+  z-index: 100;
 }
 
-.navbar-nav .nav-item {
-    margin: 0;
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #333; /* Colore scuro di default */
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5); /* Leggero contorno */
 }
 
-.navbar-nav .nav-link {
-    color: white;
-    font-size: 1.25rem;
-    padding: 0.5rem 1.5rem;
-    text-decoration: none;
-    margin-right: 1rem;
+.scrolled .logo-text {
+  color: #212529;
+  text-shadow: none;
 }
 
-.navbar-nav .nav-link:hover {
-    background-color: #555;
-    border-radius: 5px;
+.logo-accent {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d4af37; /* Gold accent color */
+  margin-left: 5px;
+  letter-spacing: 1px;
 }
 
-.navbar-toggler {
-    border: none;
+/* Navbar links */
+.navbar-links {
+  display: flex;
+  align-items: center;
 }
 
-@media (max-width: 768px) {
-    .navbar-nav {
-        text-align: center;
-        width: 100%;
-    }
-
-    .navbar-nav .nav-item {
-        display: block;
-        margin: 0;
-    }
-
-    .navbar-nav .nav-link {
-        padding: 0.5rem;
-        margin-right: 0;
-        font-size: 1.1rem;
-    }
+.navbar-items {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-@media (max-width: 480px) {
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
+.navbar-item {
+  margin: 0 10px;
+}
 
-    .navbar-nav .nav-link {
-        font-size: 1rem;
-    }
+.navbar-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #333; /* Colore scuro di default per garantire leggibilità */
+  text-decoration: none;
+  padding: 8px 15px;
+  position: relative;
+  transition: all 0.3s ease;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5); /* Leggero contorno per migliorare contrasto */
+}
+
+.scrolled .navbar-link {
+  color: rgba(33, 37, 41, 0.8);
+  text-shadow: none;
+}
+
+.navbar-link:hover {
+  color: #000;
+}
+
+.scrolled .navbar-link:hover {
+  color: #000;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #d4af37;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-link:hover::after, 
+.navbar-link.active::after {
+  width: 30px;
+}
+
+.navbar-link.active {
+  color: #000;
+  font-weight: 600;
+}
+
+.scrolled .navbar-link.active {
+  color: #000;
+}
+
+/* Call-to-Action button */
+.navbar-cta {
+  margin-left: 20px;
+}
+
+.phone-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  background: rgba(212, 175, 55, 0.3);
+  color: #333;
+  border: 1px solid #d4af37;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
+}
+
+.scrolled .phone-cta {
+  background: rgba(212, 175, 55, 0.15);
+  color: #212529;
+  border-color: #d4af37;
+}
+
+.phone-cta svg {
+  margin-right: 8px;
+}
+
+.phone-cta:hover {
+  background: #d4af37;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Mobile menu toggle */
+.navbar-menu-toggle {
+  display: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.menu-icon span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #333; /* Colore scuro di default */
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: all 0.25s ease-in-out;
+}
+
+.scrolled .menu-icon span {
+  background: #212529;
+}
+
+.menu-icon span:nth-child(1) {
+  top: 0px;
+}
+
+.menu-icon span:nth-child(2) {
+  top: 10px;
+}
+
+.menu-icon span:nth-child(3) {
+  top: 20px;
+}
+
+.menu-icon.active span:nth-child(1) {
+  top: 10px;
+  transform: rotate(135deg);
+}
+
+.menu-icon.active span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.menu-icon.active span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-135deg);
+}
+
+/* Responsive styles - FIX PER MOBILE */
+@media (max-width: 992px) {
+  body.menu-open {
+    overflow: hidden; /* Impedisce lo scrolling quando il menu è aperto */
+  }
+  
+  .navbar-menu-toggle {
+    display: block;
+  }
+  
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%; /* Ridotta larghezza su mobile */
+    max-width: 300px;
+    height: 100vh;
+    background: #fff; /* Sempre bianco per mobile */
+    flex-direction: column;
+    justify-content: flex-start; /* Cambiato da center a flex-start */
+    align-items: flex-start; /* Allineamento a sinistra su mobile */
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 80px 20px 40px; /* Padding aumentato in alto per evitare sovrapposizioni */
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Rende scrollabile il menu se necessario */
+  }
+  
+  .navbar-links.active {
+    right: 0;
+  }
+  
+  .navbar-items {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .navbar-item {
+    margin: 8px 0;
+    width: 100%;
+  }
+  
+  .navbar-link {
+    font-size: 1.1rem;
+    padding: 12px 0; /* Solo padding verticale */
+    width: 100%;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    text-shadow: none; /* Rimuove ombra su mobile */
+  }
+  
+  .navbar-link::after {
+    display: none; /* Rimuove sottolineatura su mobile */
+  }
+  
+  .navbar-link.active {
+    color: #0056b3; /* Blu invece di nero su mobile */
+    border-left: 3px solid #d4af37; /* Barra laterale per link attivo */
+    padding-left: 10px; /* Spazio per la barra */
+  }
+  
+  .navbar-cta {
+    margin: 10px 0 0;
+    width: 100%;
+  }
+  
+  .phone-cta {
+    width: 100%;
+    justify-content: center;
+    padding: 15px;
+  }
+  
+  /* Sfondo scuro quando il menu è aperto */
+  .menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+  }
+  
+  .menu-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-luxury {
+    padding: 15px 0; /* Riduzione del padding per schermi molto piccoli */
+  }
+  
+  .logo-text {
+    font-size: 1.4rem; /* Logo più piccolo */
+  }
+  
+  .logo-accent {
+    font-size: 1.6rem;
+  }
+  
+  .navbar-links {
+    width: 85%; /* Quasi tutta la larghezza su schermi molto piccoli */
+    padding: 70px 15px 30px;
+  }
 }
