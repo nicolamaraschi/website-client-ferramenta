@@ -14,6 +14,15 @@ const Home = () => {
     services: [0, 0, 0, 0, 0, 0]
   });
   
+  // Stato per il floating contact menu
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  
+  // Stato per il bottone "torna su"
+  const [isBackToTopVisible, setIsBackToTopVisible] = useState(false);
+  
+  // Stato per le FAQ
+  const [activeFaq, setActiveFaq] = useState(null);
+  
   // Effetto per le animazioni al caricamento
   useEffect(() => {
     // Gestisci animazione hero
@@ -43,19 +52,29 @@ const Home = () => {
       observer.observe(statsRef.current);
     }
     
+    // Gestione scroll per back-to-top button
+    const handleScroll = () => {
+      if (window.pageYOffset > 300) {
+        setIsBackToTopVisible(true);
+      } else {
+        setIsBackToTopVisible(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
     // Countdown per slider automatici
     const interval = setInterval(() => {
       setActiveSlide((prev) => ({
         hero: (prev.hero + 1) % 3,
-        services: prev.services.map((slide, index) => 
-          (slide + 1) % 3
-        )
+        services: prev.services.map((slide) => (slide + 1) % 3)
       }));
     }, 5000);
     
     return () => {
       clearInterval(interval);
       observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
   
@@ -69,6 +88,24 @@ const Home = () => {
         newServices[index] = slideIndex;
         return { ...prev, services: newServices };
       }
+    });
+  };
+  
+  // Funzione per toggle floating contact menu
+  const toggleContactMenu = () => {
+    setIsContactOpen(!isContactOpen);
+  };
+  
+  // Funzione per toggle FAQ
+  const toggleFaq = (index) => {
+    setActiveFaq(activeFaq === index ? null : index);
+  };
+  
+  // Funzione per tornare in cima alla pagina
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
   };
   
@@ -144,7 +181,7 @@ const Home = () => {
     },
     {
       question: "Quali zone coprite con i vostri servizi?",
-      answer: "Operiamo principalmente a Roma e provincia, ma possiamo estendere i nostri servizi anche nelle province limitrofe."
+      answer: "Operiamo principalmente a Milano e provincia, ma possiamo estendere i nostri servizi anche nelle province limitrofe."
     }
   ];
   
@@ -388,10 +425,10 @@ const Home = () => {
               <div className="gallery-overlay">
                 <div className="gallery-info">
                   <h3>Installazione Cancello</h3>
-                  <p>Roma, 2023</p>
-                  <a href="#" className="gallery-icon">
+                  <p>Milano, 2023</p>
+                  <span className="gallery-icon">
                     <i className="fas fa-plus"></i>
-                  </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -402,9 +439,9 @@ const Home = () => {
                 <div className="gallery-info">
                   <h3>Porta Blindata Moderna</h3>
                   <p>Milano, 2023</p>
-                  <a href="#" className="gallery-icon">
+                  <span className="gallery-icon">
                     <i className="fas fa-plus"></i>
-                  </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -414,10 +451,10 @@ const Home = () => {
               <div className="gallery-overlay">
                 <div className="gallery-info">
                   <h3>Serramenti di Sicurezza</h3>
-                  <p>Napoli, 2023</p>
-                  <a href="#" className="gallery-icon">
+                  <p>Milano, 2023</p>
+                  <span className="gallery-icon">
                     <i className="fas fa-plus"></i>
-                  </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -427,10 +464,10 @@ const Home = () => {
               <div className="gallery-overlay">
                 <div className="gallery-info">
                   <h3>Tapparelle Automatizzate</h3>
-                  <p>Torino, 2023</p>
-                  <a href="#" className="gallery-icon">
+                  <p>Milano, 2023</p>
+                  <span className="gallery-icon">
                     <i className="fas fa-plus"></i>
-                  </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -440,10 +477,10 @@ const Home = () => {
               <div className="gallery-overlay">
                 <div className="gallery-info">
                   <h3>Inferriata Decorativa</h3>
-                  <p>Bologna, 2022</p>
-                  <a href="#" className="gallery-icon">
+                  <p>Milano, 2022</p>
+                  <span className="gallery-icon">
                     <i className="fas fa-plus"></i>
-                  </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -453,10 +490,10 @@ const Home = () => {
               <div className="gallery-overlay">
                 <div className="gallery-info">
                   <h3>Serranda Commerciale</h3>
-                  <p>Firenze, 2022</p>
-                  <a href="#" className="gallery-icon">
+                  <p>Milano, 2022</p>
+                  <span className="gallery-icon">
                     <i className="fas fa-plus"></i>
-                  </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -552,8 +589,8 @@ const Home = () => {
           
           <div className="faq-container">
             {faqs.map((faq, index) => (
-              <div key={index} className="faq-item">
-                <div className="faq-question">
+              <div key={index} className={`faq-item ${activeFaq === index ? 'active' : ''}`}>
+                <div className="faq-question" onClick={() => toggleFaq(index)}>
                   <h3>{faq.question}</h3>
                   <span className="faq-icon">
                     <i className="fas fa-plus"></i>
@@ -617,7 +654,7 @@ const Home = () => {
                   </div>
                   <div className="detail-content">
                     <h3>Indirizzo</h3>
-                    <p>Via Roma, 123<br />00100 Roma, Italia</p>
+                    <p>Via Vergato 11<br />20161 Milano, MI</p>
                   </div>
                 </div>
                 
@@ -655,16 +692,16 @@ const Home = () => {
               <div className="contact-mini-social">
                 <h3>Seguici</h3>
                 <div className="social-links">
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <a href="#facebook" aria-label="Facebook">
                     <i className="fab fa-facebook-f"></i>
                   </a>
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <a href="#instagram" aria-label="Instagram">
                     <i className="fab fa-instagram"></i>
                   </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <a href="#linkedin" aria-label="LinkedIn">
                     <i className="fab fa-linkedin-in"></i>
                   </a>
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                  <a href="#twitter" aria-label="Twitter">
                     <i className="fab fa-twitter"></i>
                   </a>
                 </div>
@@ -731,7 +768,7 @@ const Home = () => {
       </section>
       
       {/* Quick Contact Floating Button */}
-      <div className="floating-contact">
+      <div className={`floating-contact ${isContactOpen ? 'active' : ''}`}>
         <div className="contact-bubble whatsapp">
           <a href="https://wa.me/390612345678" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
             <i className="fab fa-whatsapp"></i>
@@ -747,13 +784,16 @@ const Home = () => {
             <i className="fas fa-envelope"></i>
           </a>
         </div>
-        <button className="contact-toggle">
+        <button className={`contact-toggle ${isContactOpen ? 'active' : ''}`} onClick={toggleContactMenu}>
           <i className="fas fa-plus"></i>
         </button>
       </div>
       
       {/* Back to top button */}
-      <button className="back-to-top">
+      <button 
+        className={`back-to-top ${isBackToTopVisible ? 'visible' : ''}`}
+        onClick={scrollToTop}
+      >
         <i className="fas fa-chevron-up"></i>
       </button>
     </div>
