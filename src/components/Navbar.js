@@ -36,8 +36,8 @@ const Navbar = () => {
     <nav className={`navbar-luxury ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="navbar-container">
         <Link to="/main" className="navbar-logo">
-          <span className="logo-text">Ferramenta</span>
-          <span className="logo-accent">ABC</span>
+          <span className="logo-text">Carratu'</span>
+          <span className="logo-accent">Aniello</span>
         </Link>
         
         <div className="navbar-menu-toggle" onClick={toggleMenu}>

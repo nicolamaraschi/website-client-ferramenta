@@ -45,6 +45,12 @@ const Preventivo = () => {
   // Gestisce la verifica del reCAPTCHA
   const handleRecaptchaChange = (value) => {
     setRecaptchaVerified(!!value);
+    if (errors.recaptcha) {
+      setErrors({
+        ...errors,
+        recaptcha: null
+      });
+    }
   };
   
   // Validazione del form
@@ -149,6 +155,7 @@ const Preventivo = () => {
       });
       
       setSubmitSuccess(true);
+      setRecaptchaVerified(false);
       
       // Nascondi il messaggio di successo dopo 5 secondi
       setTimeout(() => {
@@ -366,8 +373,9 @@ const Preventivo = () => {
             <div className="form-card mt-4">
               <div className="mb-3">
                 <ReCAPTCHA
-                  sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" // Questa è una chiave di test
+                  sitekey="6Ld2VF8pAAAAAJz0kP1nXHcXs_h_lSVUQ1G-gB_P"
                   onChange={handleRecaptchaChange}
+                  theme="light"
                 />
                 {errors.recaptcha && <div className="text-danger mt-2">{errors.recaptcha}</div>}
               </div>

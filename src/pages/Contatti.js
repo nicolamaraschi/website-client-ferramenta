@@ -19,7 +19,7 @@ const Contatti = () => {
     message: ''
   });
 
-  const position = [41.890251, 12.492373]; // Coordinate di Roma
+  const position = [45.4773, 9.1815]; // Coordinate di Milano
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -64,7 +64,7 @@ const Contatti = () => {
                   <i className="fas fa-map-marker-alt"></i>
                   <div>
                     <h3>Indirizzo</h3>
-                    <p>Via Roma, 123, 00100 Roma, Italia</p>
+                    <p>Via Vergato 11, 20161 Milano MI</p>
                   </div>
                 </div>
                 
@@ -176,7 +176,7 @@ const Contatti = () => {
       <div className="map-container">
         <MapContainer 
           center={position} 
-          zoom={15} 
+          zoom={13} 
           style={{ height: "400px", width: "100%" }}
         >
           <TileLayer
@@ -185,7 +185,7 @@ const Contatti = () => {
           />
           <Marker position={position}>
             <Popup>
-              Ferramenta ABC <br/> Via Roma, 123, Roma
+              Carratu' Aniello <br/> Via Vergato 11, Milano
             </Popup>
           </Marker>
         </MapContainer>

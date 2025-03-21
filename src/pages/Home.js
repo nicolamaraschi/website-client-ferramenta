@@ -194,14 +194,14 @@ const Home = () => {
         <div className="container">
           <div className="section-header">
             <span className="section-subtitle">Chi Siamo</span>
-            <h2 className="section-title">Benvenuti alla Ferramenta ABC</h2>
+            <h2 className="section-title">Benvenuti alla Carratu'Aniello</h2>
             <div className="section-divider"></div>
           </div>
           
           <div className="intro-content">
             <div className="intro-text">
               <p>
-                Da oltre 10 anni, la <strong>Ferramenta ABC</strong> è il punto di riferimento per tutte le tue necessità 
+                Da oltre 10 anni, la <strong>Carratu'Aniello</strong> è il punto di riferimento per tutte le tue necessità 
                 di sicurezza, manutenzione e installazione. Offriamo prodotti di alta qualità 
                 e servizi professionali per garantire la sicurezza e la funzionalità della tua casa o azienda.
               </p>
@@ -232,7 +232,7 @@ const Home = () => {
             </div>
             
             <div className="intro-image">
-              <img src={`${process.env.PUBLIC_URL}/images/about-us.jpg`} alt="Il nostro team" />
+              <img src={`${process.env.PUBLIC_URL}/images/team.webp`} alt="Il nostro team" />
               <div className="intro-badge">
                 <span className="years">10+</span>
                 <span className="text">Anni di<br/>Esperienza</span>
