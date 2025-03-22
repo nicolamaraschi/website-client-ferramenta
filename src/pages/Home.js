@@ -66,7 +66,6 @@ const Home = () => {
     // Countdown per slider automatici
     const interval = setInterval(() => {
       setActiveSlide((prev) => ({
-        hero: (prev.hero + 1) % 3,
         services: prev.services.map((slide) => (slide + 1) % 3)
       }));
     }, 5000);
@@ -81,13 +80,9 @@ const Home = () => {
   // Funzione per gestire lo slide del carosello
   const handleSlideChange = (carouselType, index, slideIndex) => {
     setActiveSlide((prev) => {
-      if (carouselType === 'hero') {
-        return { ...prev, hero: slideIndex };
-      } else {
-        const newServices = [...prev.services];
-        newServices[index] = slideIndex;
-        return { ...prev, services: newServices };
-      }
+      const newServices = [...prev.services];
+      newServices[index] = slideIndex;
+      return { ...prev, services: newServices };
     });
   };
   
@@ -209,16 +204,22 @@ const Home = () => {
           ))}
         </div>
         
-        <div className="hero-indicators">
-          {[0, 1, 2].map((index) => (
-            <button 
-              key={index}
-              className={`indicator ${activeSlide.hero === index ? 'active' : ''}`}
-              onClick={() => handleSlideChange('hero', null, index)}
-              aria-label={`Slide ${index + 1}`}
-            ></button>
-          ))}
+            // Con questo codice:
+    <div className="hero-slide active">
+      <video autoPlay muted loop id="hero-video" className="hero-video">
+        <source src={`${process.env.PUBLIC_URL}/video.mp4`} type="video/mp4" />
+        Il tuo browser non supporta i video HTML5.
+      </video>
+      <div className="hero-overlay"></div>
+      <div className="hero-content">
+        <h1>Sicurezza e Qualità <br/> per la Tua Casa</h1>
+        <p>Soluzioni professionali per la sicurezza della tua abitazione e del tuo business</p>
+        <div className="hero-cta">
+          <Link to="/preventivo" className="btn-primary">Richiedi Preventivo</Link>
+          <Link to="/contatti" className="btn-secondary">Contattaci</Link>
         </div>
+      </div>
+    </div>
         
         <div className="scroll-down">
           <span>Scorri per scoprire</span>
@@ -269,7 +270,7 @@ const Home = () => {
             </div>
             
             <div className="intro-image">
-              <img src={`${process.env.PUBLIC_URL}/images/team.webp`} alt="Il nostro team" />
+              <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Il nostro team" />
               <div className="intro-badge">
                 <span className="years">10+</span>
                 <span className="text">Anni di<br/>Esperienza</span>
@@ -610,35 +611,7 @@ const Home = () => {
         </div>
       </section>
       
-      {/* Newsletter section */}
-      <section className="newsletter-section">
-        <div className="container">
-          <div className="newsletter-content">
-            <div className="newsletter-text">
-              <h2>Iscriviti alla nostra Newsletter</h2>
-              <p>Ricevi aggiornamenti, offerte speciali e consigli sulla sicurezza direttamente nella tua casella di posta.</p>
-            </div>
-            
-            <form className="newsletter-form">
-              <div className="form-group">
-                <input 
-                  type="email" 
-                  placeholder="Il tuo indirizzo email" 
-                  required 
-                />
-                <button type="submit" className="btn-subscribe">
-                  Iscriviti
-                  <i className="fas fa-paper-plane"></i>
-                </button>
-              </div>
-              <label className="privacy-check">
-                <input type="checkbox" required />
-                <span>Accetto la <Link to="/privacy">privacy policy</Link></span>
-              </label>
-            </form>
-          </div>
-        </div>
-      </section>
+    
       {/* Contact mini section */}
       <section className="contact-mini-section">
         <div className="container">

@@ -22,7 +22,6 @@ const Preventivo = () => {
   // Stato per gestire l'invio del form
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [recaptchaVerified, setRecaptchaVerified] = useState(true); // Cambiato a true per evitare errori
   
   // Gestisce il cambio dei valori del form
   const handleChange = (e) => {
@@ -37,18 +36,6 @@ const Preventivo = () => {
       setErrors({
         ...errors,
         [name]: null
-      });
-    }
-  };
-  
-  // Gestisce la verifica del reCAPTCHA - rimosso per evitare errori
-  // Questa è una simulazione che considera sempre la verifica come riuscita
-  const handleRecaptchaChange = () => {
-    setRecaptchaVerified(true);
-    if (errors.recaptcha) {
-      setErrors({
-        ...errors,
-        recaptcha: null
       });
     }
   };
@@ -114,30 +101,28 @@ const Preventivo = () => {
       newErrors.privacy = 'Devi accettare la privacy policy';
     }
     
-    // Rimosso controllo reCAPTCHA
-    
     return newErrors;
   };
   
-  // Gestisce l'invio del form
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
+  // Gestisce il pre-invio del form
+  const handleSubmit = (e) => {
     // Valida il form
     const formErrors = validateForm();
     
     if (Object.keys(formErrors).length > 0) {
+      e.preventDefault(); // Previene l'invio se ci sono errori
       setErrors(formErrors);
       return;
     }
     
     setIsSubmitting(true);
+    // Formspree gestirà l'invio del form
     
-    try {
-      // Simulazione dell'invio del form (sostituire con chiamata API reale)
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // Reset del form dopo l'invio con successo
+    // Poiché Formspree gestisce l'invio, dobbiamo gestire l'evento di successo manualmente
+    // Questa parte è opzionale e serve solo per resettare il form dopo l'invio
+    setTimeout(() => {
+      setSubmitSuccess(true);
+      setIsSubmitting(false);
       setFormData({
         nome: '',
         cognome: '',
@@ -151,21 +136,11 @@ const Preventivo = () => {
         urgente: false
       });
       
-      setSubmitSuccess(true);
-      
       // Nascondi il messaggio di successo dopo 5 secondi
       setTimeout(() => {
         setSubmitSuccess(false);
       }, 5000);
-      
-    } catch (error) {
-      console.error('Errore durante l\'invio del modulo:', error);
-      setErrors({
-        form: 'Si è verificato un errore durante l\'invio del modulo. Riprova più tardi.'
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    }, 2000);
   };
   
   // Opzioni per il select della tipologia di lavoro
@@ -203,7 +178,26 @@ const Preventivo = () => {
             </div>
           )}
           
-          <form onSubmit={handleSubmit}>
+          {/* Form con ID Formspree corretto */}
+          <form 
+            action="https://formspree.io/f/mblggzbn" 
+            method="POST"
+            onSubmit={handleSubmit}
+          >
+            {/* Campo nascosto per la pagina di reindirizzamento dopo l'invio */}
+            <input 
+              type="hidden" 
+              name="_next" 
+              value={window.location.href} 
+            />
+            
+            {/* Campo honeypot per prevenire spam */}
+            <input 
+              type="text" 
+              name="_gotcha" 
+              style={{ display: 'none' }} 
+            />
+            
             <div className="row">
               <div className="col-md-6">
                 <div className="form-card">
@@ -219,6 +213,7 @@ const Preventivo = () => {
                       onChange={handleChange}
                       placeholder="Nome"
                       disabled={isSubmitting}
+                      required
                     />
                     <label htmlFor="nome">Nome *</label>
                     {errors.nome && <div className="invalid-feedback">{errors.nome}</div>}
@@ -234,6 +229,7 @@ const Preventivo = () => {
                       onChange={handleChange}
                       placeholder="Cognome"
                       disabled={isSubmitting}
+                      required
                     />
                     <label htmlFor="cognome">Cognome *</label>
                     {errors.cognome && <div className="invalid-feedback">{errors.cognome}</div>}
@@ -249,6 +245,7 @@ const Preventivo = () => {
                       onChange={handleChange}
                       placeholder="Email"
                       disabled={isSubmitting}
+                      required
                     />
                     <label htmlFor="email">Email *</label>
                     {errors.email && <div className="invalid-feedback">{errors.email}</div>}
@@ -284,6 +281,7 @@ const Preventivo = () => {
                       onChange={handleChange}
                       aria-label="Tipologia di lavoro"
                       disabled={isSubmitting}
+                      required
                     >
                       {tipiDiLavoro.map((tipo) => (
                         <option 
@@ -309,6 +307,7 @@ const Preventivo = () => {
                       placeholder="Descrizione"
                       style={{height: "120px"}}
                       disabled={isSubmitting}
+                      required
                     ></textarea>
                     <label htmlFor="descrizione">Descrizione *</label>
                     {errors.descrizione && <div className="invalid-feedback">{errors.descrizione}</div>}
@@ -326,6 +325,7 @@ const Preventivo = () => {
                           onChange={handleChange}
                           min={new Date().toISOString().split('T')[0]}
                           disabled={isSubmitting}
+                          required
                         />
                         <label htmlFor="data">Data Preferita *</label>
                         {errors.data && <div className="invalid-feedback">{errors.data}</div>}
@@ -342,6 +342,7 @@ const Preventivo = () => {
                           value={formData.ora}
                           onChange={handleChange}
                           disabled={isSubmitting}
+                          required
                         />
                         <label htmlFor="ora">Ora Preferita *</label>
                         {errors.ora && <div className="invalid-feedback">{errors.ora}</div>}
@@ -367,13 +368,6 @@ const Preventivo = () => {
             </div>
             
             <div className="form-card mt-4">
-              {/* Rimosso il componente ReCAPTCHA problematico */}
-              <div className="mb-3">
-                <div className="alert alert-info">
-                  Verifica di sicurezza: seleziona la casella di controllo sulla privacy per procedere.
-                </div>
-              </div>
-              
               <div className="form-check mb-3">
                 <input
                   className={`form-check-input ${errors.privacy ? 'is-invalid' : ''}`}
@@ -383,6 +377,7 @@ const Preventivo = () => {
                   checked={formData.privacy}
                   onChange={handleChange}
                   disabled={isSubmitting}
+                  required
                 />
                 <label className="form-check-label" htmlFor="privacy">
                   Accetto la <a href="/privacy" target="_blank" rel="noopener noreferrer">privacy policy</a> *
