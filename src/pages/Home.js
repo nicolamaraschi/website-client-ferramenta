@@ -10,8 +10,8 @@ const Home = () => {
   
   // Stato per tenere traccia del carosello attivo
   const [activeSlide, setActiveSlide] = useState({
-    hero: 0,
-    services: [0, 0, 0, 0, 0, 0]
+    hero: 0, 
+    services: [0, 0, 0, 0, 0, 0] 
   });
   
   // Stato per il floating contact menu
@@ -25,12 +25,10 @@ const Home = () => {
   
   // Effetto per le animazioni al caricamento
   useEffect(() => {
-    // Gestisci animazione hero
     if (heroRef.current) {
       heroRef.current.classList.add('animate');
     }
     
-    // Observer per animazioni al momento giusto dello scroll
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -39,20 +37,17 @@ const Home = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 } 
     );
     
-    // Osserva sezioni di servizi
     serviceRefs.current.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
     
-    // Osserva sezione statistiche
     if (statsRef.current) {
       observer.observe(statsRef.current);
     }
     
-    // Gestione scroll per back-to-top button
     const handleScroll = () => {
       if (window.pageYOffset > 300) {
         setIsBackToTopVisible(true);
@@ -63,40 +58,44 @@ const Home = () => {
     
     window.addEventListener('scroll', handleScroll);
     
-    // Countdown per slider automatici
-    const interval = setInterval(() => {
-      setActiveSlide((prev) => ({
-        services: prev.services.map((slide) => (slide + 1) % 3)
+    const heroInterval = setInterval(() => {
+      setActiveSlide(prev => ({
+        ...prev,
+        hero: (prev.hero + 1) % 3 
       }));
-    }, 5000);
+    }, 7000); 
+
+    const servicesInterval = setInterval(() => {
+      setActiveSlide((prev) => ({
+        ...prev,
+        services: prev.services.map((slide) => (slide + 1) % 3) 
+      }));
+    }, 5000); 
     
     return () => {
-      clearInterval(interval);
+      clearInterval(heroInterval);
+      clearInterval(servicesInterval);
       observer.disconnect();
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, []); 
   
-  // Funzione per gestire lo slide del carosello
-  const handleSlideChange = (carouselType, index, slideIndex) => {
+  const handleServiceSlideChange = (serviceIndex, slideIndex) => {
     setActiveSlide((prev) => {
-      const newServices = [...prev.services];
-      newServices[index] = slideIndex;
-      return { ...prev, services: newServices };
+      const newServicesSlides = [...prev.services];
+      newServicesSlides[serviceIndex] = slideIndex;
+      return { ...prev, services: newServicesSlides };
     });
   };
   
-  // Funzione per toggle floating contact menu
   const toggleContactMenu = () => {
     setIsContactOpen(!isContactOpen);
   };
   
-  // Funzione per toggle FAQ
   const toggleFaq = (index) => {
     setActiveFaq(activeFaq === index ? null : index);
   };
   
-  // Funzione per tornare in cima alla pagina
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -104,12 +103,11 @@ const Home = () => {
     });
   };
   
-  // Dati servizi
   const services = [
     {
       title: "Serramenti di Sicurezza",
       description: "Soluzioni anche automatizzate per garantire la massima sicurezza della tua casa o azienda.",
-      images: ["serramenti.webp", "serramenti.webp", "serramenti.webp"]
+      images: ["serramenti.webp", "serramenti.webp", "serramenti.webp"] 
     },
     {
       title: "Porte Blindate",
@@ -138,14 +136,12 @@ const Home = () => {
     }
   ];
   
-  // Dati statistiche
   const stats = [
     { count: 100, label: "Lavori Completati" },
     { count: 50, label: "Clienti Soddisfatti" },
     { count: 10, label: "Anni di Esperienza" }
   ];
   
-  // Dati testimonianze
   const testimonials = [
     {
       quote: "Eccellente servizio e prodotti di alta qualità. Consiglio vivamente!",
@@ -164,7 +160,6 @@ const Home = () => {
     }
   ];
   
-  // FAQ
   const faqs = [
     {
       question: "Quali sono i vostri orari di apertura?",
@@ -184,42 +179,21 @@ const Home = () => {
     <div className="home-page">
       {/* Hero section */}
       <section className="hero-section" ref={heroRef}>
-        <div className="hero-carousel">
-          {[1, 2, 3].map((_, index) => (
-            <div 
-              key={index} 
-              className={`hero-slide ${activeSlide.hero === index ? 'active' : ''}`}
-              style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/hero-${index + 1}.jpg)`}}
-            >
-              <div className="hero-overlay"></div>
-              <div className="hero-content">
-                <h1>Sicurezza e Qualità <br/> per la Tua Casa</h1>
-                <p>Soluzioni professionali per la sicurezza della tua abitazione e del tuo business</p>
-                <div className="hero-cta">
-                  <Link to="/preventivo" className="btn-primary">Richiedi Preventivo</Link>
-                  <Link to="/contatti" className="btn-secondary">Contattaci</Link>
-                </div>
-              </div>
+        <div className="hero-slide active"> 
+          <video autoPlay muted loop id="hero-video" className="hero-video">
+            <source src={`${process.env.PUBLIC_URL}/video.mp4`} type="video/mp4" />
+            Il tuo browser non supporta i video HTML5.
+          </video>
+          <div className="hero-overlay"></div>
+          <div className="hero-content">
+            <h1>Sicurezza e Qualità <br/> per la Tua Casa</h1>
+            <p>Soluzioni professionali per la sicurezza della tua abitazione e del tuo business</p>
+            <div className="hero-cta">
+              <Link to="/preventivo" className="btn-primary">Richiedi Preventivo</Link>
+              <Link to="/contatti" className="btn-secondary">Contattaci</Link>
             </div>
-          ))}
+          </div>
         </div>
-        
-            // Con questo codice:
-    <div className="hero-slide active">
-      <video autoPlay muted loop id="hero-video" className="hero-video">
-        <source src={`${process.env.PUBLIC_URL}/video.mp4`} type="video/mp4" />
-        Il tuo browser non supporta i video HTML5.
-      </video>
-      <div className="hero-overlay"></div>
-      <div className="hero-content">
-        <h1>Sicurezza e Qualità <br/> per la Tua Casa</h1>
-        <p>Soluzioni professionali per la sicurezza della tua abitazione e del tuo business</p>
-        <div className="hero-cta">
-          <Link to="/preventivo" className="btn-primary">Richiedi Preventivo</Link>
-          <Link to="/contatti" className="btn-secondary">Contattaci</Link>
-        </div>
-      </div>
-    </div>
         
         <div className="scroll-down">
           <span>Scorri per scoprire</span>
@@ -270,7 +244,7 @@ const Home = () => {
             </div>
             
             <div className="intro-image">
-              <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Il nostro team" />
+              <img src={`${process.env.PUBLIC_URL}/images/logo2.png`} alt="Logo Carratu'Aniello" /> 
               <div className="intro-badge">
                 <span className="years">10+</span>
                 <span className="text">Anni di<br/>Esperienza</span>
@@ -294,7 +268,7 @@ const Home = () => {
               <div 
                 key={serviceIndex}
                 className="service-card"
-                ref={el => serviceRefs.current[serviceIndex] = el}
+                ref={el => serviceRefs.current[serviceIndex] = el} 
               >
                 <div className="service-image">
                   <img 
@@ -320,13 +294,14 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       {/* Services showcase with carousel */}
       <section className="services-showcase">
         {services.map((service, index) => (
           <div 
             key={index} 
             className={`showcase-item ${index % 2 !== 0 ? 'reverse' : ''}`}
-            ref={el => serviceRefs.current[index + 3] = el}
+            ref={el => serviceRefs.current[index + 3] = el} 
           >
             <div className="showcase-content">
               <span className="showcase-number">0{index + 1}</span>
@@ -357,8 +332,8 @@ const Home = () => {
                   <button 
                     className="carousel-arrow prev"
                     onClick={() => {
-                      const newIndex = (activeSlide.services[index] - 1 + 3) % 3;
-                      handleSlideChange('services', index, newIndex);
+                      const newSlideIndex = (activeSlide.services[index] - 1 + service.images.length) % service.images.length;
+                      handleServiceSlideChange(index, newSlideIndex);
                     }}
                     aria-label="Precedente"
                   >
@@ -366,11 +341,11 @@ const Home = () => {
                   </button>
                   
                   <div className="carousel-dots">
-                    {[0, 1, 2].map((dotIndex) => (
+                    {service.images.map((_, dotIndex) => (
                       <button 
                         key={dotIndex}
                         className={`carousel-dot ${activeSlide.services[index] === dotIndex ? 'active' : ''}`}
-                        onClick={() => handleSlideChange('services', index, dotIndex)}
+                        onClick={() => handleServiceSlideChange(index, dotIndex)}
                         aria-label={`Slide ${dotIndex + 1}`}
                       ></button>
                     ))}
@@ -379,8 +354,8 @@ const Home = () => {
                   <button 
                     className="carousel-arrow next"
                     onClick={() => {
-                      const newIndex = (activeSlide.services[index] + 1) % 3;
-                      handleSlideChange('services', index, newIndex);
+                      const newSlideIndex = (activeSlide.services[index] + 1) % service.images.length;
+                      handleServiceSlideChange(index, newSlideIndex);
                     }}
                     aria-label="Successivo"
                   >
@@ -400,7 +375,7 @@ const Home = () => {
             <h2>Hai bisogno di un intervento urgente?</h2>
             <p>Contattaci subito per una consulenza gratuita o richiedi un preventivo per i tuoi progetti.</p>
             <div className="cta-buttons">
-              <a href="tel:+390612345678" className="btn-primary btn-call">
+              <a href="tel:+390612345678" className="btn-primary btn-call"> 
                 <i className="fas fa-phone-alt"></i> Chiamaci Ora
               </a>
               <Link to="/preventivo" className="btn-secondary btn-quote">
@@ -422,7 +397,7 @@ const Home = () => {
           
           <div className="portfolio-gallery">
             <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/Cancelli.jpeg`} alt="Lavoro 1" />
+              <img src={`${process.env.PUBLIC_URL}/images/Cancelli.jpeg`} alt="Installazione Cancello" />
               <div className="gallery-overlay">
                 <div className="gallery-info">
                   <h3>Installazione Cancello</h3>
@@ -435,7 +410,7 @@ const Home = () => {
             </div>
             
             <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/portaBlindata.webp`} alt="Lavoro 2" />
+              <img src={`${process.env.PUBLIC_URL}/images/portaBlindata.webp`} alt="Porta Blindata Moderna" />
               <div className="gallery-overlay">
                 <div className="gallery-info">
                   <h3>Porta Blindata Moderna</h3>
@@ -447,8 +422,8 @@ const Home = () => {
               </div>
             </div>
             
-            <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/serramenti.webp`} alt="Lavoro 3" />
+             <div className="gallery-item">
+              <img src={`${process.env.PUBLIC_URL}/images/serramenti.webp`} alt="Serramenti di Sicurezza" />
               <div className="gallery-overlay">
                 <div className="gallery-info">
                   <h3>Serramenti di Sicurezza</h3>
@@ -461,7 +436,7 @@ const Home = () => {
             </div>
             
             <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/tapparelle.jpg`} alt="Lavoro 4" />
+              <img src={`${process.env.PUBLIC_URL}/images/tapparelle.jpg`} alt="Tapparelle Automatizzate" />
               <div className="gallery-overlay">
                 <div className="gallery-info">
                   <h3>Tapparelle Automatizzate</h3>
@@ -474,7 +449,7 @@ const Home = () => {
             </div>
             
             <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/inferiata.jpeg`} alt="Lavoro 5" />
+              <img src={`${process.env.PUBLIC_URL}/images/inferiata.jpeg`} alt="Inferriata Decorativa" />
               <div className="gallery-overlay">
                 <div className="gallery-info">
                   <h3>Inferriata Decorativa</h3>
@@ -487,7 +462,7 @@ const Home = () => {
             </div>
             
             <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/serranda.webp`} alt="Lavoro 6" />
+              <img src={`${process.env.PUBLIC_URL}/images/serranda.webp`} alt="Serranda Commerciale" />
               <div className="gallery-overlay">
                 <div className="gallery-info">
                   <h3>Serranda Commerciale</h3>
@@ -513,7 +488,7 @@ const Home = () => {
                 </div>
                 <div className="stat-content">
                   <div className="stat-number">
-                    <span className="counter">{stat.count}</span>
+                    <span className="counter">{stat.count}</span> 
                     <span className="plus">+</span>
                   </div>
                   <p className="stat-label">{stat.label}</p>
@@ -533,7 +508,7 @@ const Home = () => {
             <div className="section-divider"></div>
           </div>
           
-          <div className="testimonials-carousel">
+          <div className="testimonials-carousel"> 
             <div className="testimonials-track">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="testimonial-item">
@@ -544,7 +519,6 @@ const Home = () => {
                     <p className="testimonial-text">{testimonial.quote}</p>
                     <div className="testimonial-author">
                       <div className="author-avatar">
-                        {/* Placeholder per immagine avatar, usando iniziali */}
                         <div className="avatar-initials">
                           {testimonial.author.split(' ').map(name => name[0]).join('')}
                         </div>
@@ -557,23 +531,6 @@ const Home = () => {
                   </div>
                 </div>
               ))}
-            </div>
-            
-            <div className="testimonial-controls">
-              <button className="testimonial-arrow prev">
-                <i className="fas fa-chevron-left"></i>
-              </button>
-              <div className="testimonial-dots">
-                {testimonials.map((_, index) => (
-                  <button 
-                    key={index} 
-                    className={`testimonial-dot ${index === 0 ? 'active' : ''}`}
-                  ></button>
-                ))}
-              </div>
-              <button className="testimonial-arrow next">
-                <i className="fas fa-chevron-right"></i>
-              </button>
             </div>
           </div>
         </div>
@@ -594,7 +551,7 @@ const Home = () => {
                 <div className="faq-question" onClick={() => toggleFaq(index)}>
                   <h3>{faq.question}</h3>
                   <span className="faq-icon">
-                    <i className="fas fa-plus"></i>
+                    <i className={`fas ${activeFaq === index ? 'fa-minus' : 'fa-plus'}`}></i>
                   </span>
                 </div>
                 <div className="faq-answer">
@@ -611,100 +568,78 @@ const Home = () => {
         </div>
       </section>
       
-    
-      {/* Contact mini section */}
+      {/* Contact mini section - MODIFICATA */}
       <section className="contact-mini-section">
         <div className="container">
-          <div className="contact-mini-wrapper">
-            <div className="contact-mini-info">
-              <h2>Contattaci per Qualsiasi Informazione</h2>
-              <p>Siamo a tua disposizione per offrirti consulenza, supporto e preventivi gratuiti per tutti i tuoi progetti.</p>
-              
-              <div className="contact-mini-details">
-                <div className="mini-detail">
-                  <div className="detail-icon">
-                    <i className="fas fa-map-marker-alt"></i>
+          <div className="contact-mini-wrapper"> 
+            <div className="row justify-content-center"> 
+              <div className="col-lg-10 col-md-12"> 
+                {/* Aggiunto style={{ margin: '0 auto' }} per centrare il blocco contact-mini-info */}
+                <div className="contact-mini-info" style={{ margin: '0 auto' }}> 
+                  <h2>Contattaci per Qualsiasi Informazione</h2>
+                  <p>Siamo a tua disposizione per offrirti consulenza, supporto e preventivi gratuiti per tutti i tuoi progetti.</p>
+                  
+                  <div className="contact-mini-details">
+                    <div className="mini-detail">
+                      <div className="detail-icon">
+                        <i className="fas fa-map-marker-alt"></i>
+                      </div>
+                      <div className="detail-content">
+                        <h3>Indirizzo</h3>
+                        <p>Via Vergato 11<br />20161 Milano, MI</p>
+                      </div>
+                    </div>
+                    
+                    <div className="mini-detail">
+                      <div className="detail-icon">
+                        <i className="fas fa-phone-alt"></i>
+                      </div>
+                      <div className="detail-content">
+                        <h3>Telefono</h3>
+                        <p>+39 06 1234567<br />+39 333 1234567</p> 
+                      </div>
+                    </div>
+                    
+                    <div className="mini-detail">
+                      <div className="detail-icon">
+                        <i className="fas fa-envelope"></i>
+                      </div>
+                      <div className="detail-content">
+                        <h3>Email</h3>
+                        <p>info@ferramentaabc.it<br />supporto@ferramentaabc.it</p> 
+                      </div>
+                    </div>
+                    
+                    <div className="mini-detail">
+                      <div className="detail-icon">
+                        <i className="fas fa-clock"></i>
+                      </div>
+                      <div className="detail-content">
+                        <h3>Orari</h3>
+                        <p>Lun-Ven: 9:00 - 18:00<br />Sab: 9:00 - 13:00</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="detail-content">
-                    <h3>Indirizzo</h3>
-                    <p>Via Vergato 11<br />20161 Milano, MI</p>
-                  </div>
-                </div>
-                
-                <div className="mini-detail">
-                  <div className="detail-icon">
-                    <i className="fas fa-phone-alt"></i>
-                  </div>
-                  <div className="detail-content">
-                    <h3>Telefono</h3>
-                    <p>+39 06 1234567<br />+39 333 1234567</p>
-                  </div>
-                </div>
-                
-                <div className="mini-detail">
-                  <div className="detail-icon">
-                    <i className="fas fa-envelope"></i>
-                  </div>
-                  <div className="detail-content">
-                    <h3>Email</h3>
-                    <p>info@ferramentaabc.it<br />supporto@ferramentaabc.it</p>
-                  </div>
-                </div>
-                
-                <div className="mini-detail">
-                  <div className="detail-icon">
-                    <i className="fas fa-clock"></i>
-                  </div>
-                  <div className="detail-content">
-                    <h3>Orari</h3>
-                    <p>Lun-Ven: 9:00 - 18:00<br />Sab: 9:00 - 13:00</p>
+                  
+                  <div className="contact-mini-social">
+                    <h3>Seguici</h3>
+                    <div className="social-links">
+                      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i className="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i className="fab fa-instagram"></i>
+                      </a>
+                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i className="fab fa-linkedin-in"></i>
+                      </a>
+                      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <i className="fab fa-twitter"></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-              
-              <div className="contact-mini-social">
-                <h3>Seguici</h3>
-                <div className="social-links">
-                  <a href="#facebook" aria-label="Facebook">
-                    <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a href="#instagram" aria-label="Instagram">
-                    <i className="fab fa-instagram"></i>
-                  </a>
-                  <a href="#linkedin" aria-label="LinkedIn">
-                    <i className="fab fa-linkedin-in"></i>
-                  </a>
-                  <a href="#twitter" aria-label="Twitter">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-            <div className="contact-mini-form">
-              <h3>Inviaci un Messaggio</h3>
-              <form>
-                <div className="form-row">
-                  <div className="form-group">
-                    <input type="text" placeholder="Nome" required />
-                  </div>
-                  <div className="form-group">
-                    <input type="email" placeholder="Email" required />
-                  </div>
-                </div>
-                
-                <div className="form-group">
-                  <input type="text" placeholder="Oggetto" required />
-                </div>
-                
-                <div className="form-group">
-                  <textarea placeholder="Messaggio" rows="5" required></textarea>
-                </div>
-                
-                <button type="submit" className="btn-primary">
-                  Invia Messaggio
-                </button>
-              </form>
             </div>
           </div>
         </div>
@@ -719,10 +654,9 @@ const Home = () => {
             <div className="section-divider"></div>
           </div>
           
-          <div className="partners-slider">
-            {/* In un'implementazione reale, queste sarebbero immagini reali dei partner */}
+          <div className="partners-slider"> 
             <div className="partner-item">
-              <div className="partner-logo">Partner 1</div>
+              <div className="partner-logo">Partner 1</div> 
             </div>
             <div className="partner-item">
               <div className="partner-logo">Partner 2</div>
@@ -743,32 +677,35 @@ const Home = () => {
       {/* Quick Contact Floating Button */}
       <div className={`floating-contact ${isContactOpen ? 'active' : ''}`}>
         <div className="contact-bubble whatsapp">
-          <a href="https://wa.me/390612345678" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <a href="https://wa.me/390612345678" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"> 
             <i className="fab fa-whatsapp"></i>
           </a>
         </div>
         <div className="contact-bubble phone">
-          <a href="tel:+390612345678" aria-label="Chiama">
+          <a href="tel:+390612345678" aria-label="Chiama"> 
             <i className="fas fa-phone-alt"></i>
           </a>
         </div>
         <div className="contact-bubble email">
-          <a href="mailto:info@ferramentaabc.it" aria-label="Email">
+          <a href="mailto:info@ferramentaabc.it" aria-label="Email"> 
             <i className="fas fa-envelope"></i>
           </a>
         </div>
-        <button className={`contact-toggle ${isContactOpen ? 'active' : ''}`} onClick={toggleContactMenu}>
-          <i className="fas fa-plus"></i>
+        <button className={`contact-toggle ${isContactOpen ? 'active' : ''}`} onClick={toggleContactMenu} aria-expanded={isContactOpen} aria-label="Apri menu contatti rapidi">
+          <i className={`fas ${isContactOpen ? 'fa-times' : 'fa-plus'}`}></i> 
         </button>
       </div>
       
       {/* Back to top button */}
-      <button 
-        className={`back-to-top ${isBackToTopVisible ? 'visible' : ''}`}
-        onClick={scrollToTop}
-      >
-        <i className="fas fa-chevron-up"></i>
-      </button>
+      {isBackToTopVisible && ( 
+        <button 
+          className="back-to-top visible" 
+          onClick={scrollToTop}
+          aria-label="Torna in cima"
+        >
+          <i className="fas fa-chevron-up"></i>
+        </button>
+      )}
     </div>
   );
 };

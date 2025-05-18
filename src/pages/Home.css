@@ -1130,14 +1130,14 @@
   }
   
   .contact-mini-wrapper {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-    background-color: white;
+    position: relative; /* Per stare sopra ::before */
+    z-index: 1; /* Per stare sopra ::before */
+    display: flex; /* USA FLEXBOX PER CENTRARE */
+    justify-content: center; /* CENTRA IL FIGLIO ORIZZONTALMENTE */
+    align-items: center; /* CENTRA IL FIGLIO VERTICALMENTE (opzionale, dipende dall'effetto) */
+    background-color: white; /* Sfondo della "card" bianca */
     border-radius: var(--radius-md);
-    overflow: hidden;
+    overflow: hidden; /* Mantiene i bordi arrotondati se il figlio ha angoli */
     box-shadow: var(--shadow-lg);
   }
   
@@ -1525,7 +1525,14 @@
     }
     
     .contact-mini-section::before {
-      display: none;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%; /* Copre la metà sinistra */
+      height: 100%;
+      background-color: var(--light-color); /* Colore per la parte sinistra */
+      z-index: 0; /* Dietro contact-mini-wrapper */
     }
   }
   
@@ -1669,40 +1676,4 @@
     }
   }
   
-  /* Additional JavaScript needed for complete functionality */
-  /* 
-    // For FAQ toggle
-    document.querySelectorAll('.faq-question').forEach(question => {
-      question.addEventListener('click', () => {
-        const item = question.parentNode;
-        item.classList.toggle('active');
-      });
-    });
-    
-    // For floating contact toggle
-    const contactToggle = document.querySelector('.contact-toggle');
-    const floatingContact = document.querySelector('.floating-contact');
-    
-    contactToggle.addEventListener('click', () => {
-      contactToggle.classList.toggle('active');
-      floatingContact.classList.toggle('active');
-    });
-    
-    // For back to top button
-    const backToTop = document.querySelector('.back-to-top');
-    
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
-    });
-    
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  */
+  
