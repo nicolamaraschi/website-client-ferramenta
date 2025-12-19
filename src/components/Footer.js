@@ -15,7 +15,7 @@ const Footer = () => {
               Servizi professionali di serrature e chiavi con oltre 15 anni di esperienza.
             </p>
           </div>
-          
+
           <div className="footer-columns">
             <div className="footer-column">
               <h5 className="column-title">Navigazione</h5>
@@ -26,7 +26,7 @@ const Footer = () => {
                 <li><a href="/preventivo">Preventivo</a></li>
               </ul>
             </div>
-            
+
             <div className="footer-column">
               <h5 className="column-title">Contatti</h5>
               <ul className="footer-contacts">
@@ -40,7 +40,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <i className="fas fa-envelope"></i>
-                  <span>info@ferramentaabc.it</span>
+                  <span>info@carratuaniello.it</span>
                 </li>
                 <li>
                   <i className="fas fa-clock"></i>
@@ -50,7 +50,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="footer-bottom">
           <p className="copyright">
             &copy; 2024 Carratu' Aniello. Tutti i diritti riservati.

@@ -39,7 +39,7 @@ const Contatti = () => {
       <div className="contatti-content">
         <div className="container">
           {/* La riga g-5 e le colonne sono state modificate per centrare la card delle info */}
-          <div className="row g-5 justify-content-center"> 
+          <div className="row g-5 justify-content-center">
             <div className="col-lg-8 col-md-10"> {/* Colonna più larga per centrare meglio la singola card */}
               <div className="contatti-info-card">
                 <h2>I Nostri Contatti</h2>
@@ -50,7 +50,7 @@ const Contatti = () => {
                     <p>Via Vergato 11, 20161 Milano MI</p>
                   </div>
                 </div>
-                
+
                 <div className="info-item">
                   <i className="fas fa-phone-alt"></i>
                   <div>
@@ -58,15 +58,15 @@ const Contatti = () => {
                     <p>+39 06 1234567</p> {/* Esempio, da sostituire */}
                   </div>
                 </div>
-                
+
                 <div className="info-item">
                   <i className="fas fa-envelope"></i>
                   <div>
                     <h3>Email</h3>
-                    <p>info@ferramentaabc.it</p> {/* Esempio, da sostituire */}
+                    <p>info@carratuaniello.it</p> {/* Esempio, da sostituire */}
                   </div>
                 </div>
-                
+
                 <div className="info-item">
                   <i className="fas fa-clock"></i>
                   <div>
@@ -74,7 +74,7 @@ const Contatti = () => {
                     <p>Lun-Ven: 9:00-18:00<br />Sab: 9:00-13:00</p>
                   </div>
                 </div>
-                
+
                 <div className="social-links">
                   <h3>Seguici sui Social</h3>
                   <div className="social-icons">
@@ -86,16 +86,16 @@ const Contatti = () => {
                     </a>
                   </div>
                 </div>
-                
-                <button 
-                  className="whatsapp-button" 
+
+                <button
+                  className="whatsapp-button"
                   onClick={handleWhatsAppClick}
                 >
                   <i className="fab fa-whatsapp"></i> Contattaci su WhatsApp
                 </button>
               </div>
             </div>
-            
+
             {/* Rimossa la colonna del form "Inviaci un Messaggio" */}
             {/* <div className="col-lg-6">
               <div className="contatti-form-card">
@@ -111,9 +111,9 @@ const Contatti = () => {
       </div>
 
       <div className="map-container">
-        <MapContainer 
-          center={position} 
-          zoom={13} 
+        <MapContainer
+          center={position}
+          zoom={13}
           style={{ height: "400px", width: "100%" }}
         >
           <TileLayer
@@ -122,7 +122,7 @@ const Contatti = () => {
           />
           <Marker position={position}>
             <Popup>
-              Carratu' Aniello <br/> Via Vergato 11, Milano
+              Carratu' Aniello <br /> Via Vergato 11, Milano
             </Popup>
           </Marker>
         </MapContainer>
