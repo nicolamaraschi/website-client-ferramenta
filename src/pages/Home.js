@@ -206,7 +206,7 @@ const Home = () => {
       {/* Hero section */}
       <section className="hero-section" ref={heroRef}>
         <div className="hero-slide active">
-          <video autoPlay muted loop id="hero-video" className="hero-video">
+          <video autoPlay muted loop playsInline id="hero-video" className="hero-video">
             <source src={`${process.env.PUBLIC_URL}/video.mp4`} type="video/mp4" />
             Il tuo browser non supporta i video HTML5.
           </video>
