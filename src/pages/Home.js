@@ -216,7 +216,7 @@ const Home = () => {
             <p>Emergenza Fabbro 24h? Interveniamo in 30 minuti in tutta Milano per apertura porte bloccate, cambio serrature e riparazioni urgenti.</p>
             <div className="hero-cta">
               <a href="tel:+393923842491" className="btn-primary" title="Chiama Subito Fabbro Milano">Chiama Ora: 392 3842491</a>
-              <Link to="/contatti" className="btn-secondary">Richiedi Preventivo</Link>
+              <Link to="/preventivo" className="btn-secondary">Richiedi Preventivo</Link>
             </div>
           </div>
         </div>
