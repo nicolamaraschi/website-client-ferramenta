@@ -150,7 +150,7 @@ const Home = () => {
     {
       title: "Pronto Intervento Apertura Porte",
       description: "Apertura porte bloccate senza scasso. Intervento rapido fabbro Milano centro e provincia.",
-      images: ["serramenti.webp", "serramenti.webp", "serramenti.webp"]
+      images: ["aperturaPorte.jpg", "aperturaPorte.jpg", "aperturaPorte.jpg"]
     },
     {
       title: "Sostituzione Serrature Milano",
@@ -165,17 +165,17 @@ const Home = () => {
     {
       title: "Riparazione Cancelli Automatici",
       description: "Assistenza tecnica per cancelli elettrici e recinzioni. Manutenzione ordinaria e straordinaria.",
-      images: ["Cancelli.jpeg", "Cancelli.jpeg", "Cancelli.jpeg"]
+      images: ["riparazioneCancelli.jpg", "riparazioneCancelli.jpg", "riparazioneCancelli.jpg"]
     },
     {
       title: "Sblocco Tapparelle e Persiane",
       description: "Fabbro per sblocco tapparelle incastrate, sostituzione cinghie e motorizzazione tapparelle.",
-      images: ["tapparelle.jpg", "tapparelle.jpg", "tapparelle.jpg"]
+      images: ["sblocco.jpg", "sblocco.jpg", "sblocco.jpg"]
     },
     {
       title: "Serrande Negozi Milano",
       description: "Riparazione e sblocco serrande metalliche per negozi e box auto. Intervento urgente h24.",
-      images: ["serranda.webp", "serranda.webp", "serranda.webp"]
+      images: ["serrande.jpg", "serrande.jpg", "serrande.jpg"]
     }
   ];
 
@@ -423,7 +423,7 @@ const Home = () => {
 
           <div className="portfolio-gallery">
             <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/Cancelli.jpeg`} alt="Installazione Cancello" />
+              <img src={`${process.env.PUBLIC_URL}/images/riparazioneCancelli.jpg`} alt="Installazione Cancello" />
               <div className="gallery-overlay">
                 <div className="gallery-info">
                   <h3>Installazione Cancello</h3>
@@ -449,10 +449,10 @@ const Home = () => {
             </div>
 
             <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/serramenti.webp`} alt="Serramenti di Sicurezza" />
+              <img src={`${process.env.PUBLIC_URL}/images/aperturaPorte.jpg`} alt="Apertura Porta Bloccata" />
               <div className="gallery-overlay">
                 <div className="gallery-info">
-                  <h3>Serramenti di Sicurezza</h3>
+                  <h3>Apertura Porta Bloccata</h3>
                   <p>Milano, 2023</p>
                   <span className="gallery-icon">
                     <i className="fas fa-plus"></i>
@@ -462,10 +462,10 @@ const Home = () => {
             </div>
 
             <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/tapparelle.jpg`} alt="Tapparelle Automatizzate" />
+              <img src={`${process.env.PUBLIC_URL}/images/sblocco.jpg`} alt="Sblocco Tapparelle" />
               <div className="gallery-overlay">
                 <div className="gallery-info">
-                  <h3>Tapparelle Automatizzate</h3>
+                  <h3>Sblocco Tapparelle</h3>
                   <p>Milano, 2023</p>
                   <span className="gallery-icon">
                     <i className="fas fa-plus"></i>
