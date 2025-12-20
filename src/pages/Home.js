@@ -21,7 +21,7 @@ const Home = () => {
     "@type": "EmergencyService",
     "name": "Carratu'Aniello Fabbro Milano",
     "image": `${process.env.PUBLIC_URL}/images/logo2.png`,
-    "telephone": "+390612345678",
+    "telephone": "+393923842491",
     "url": "https://nicolamaraschi.github.io/website-client-ferramenta",
     "address": {
       "@type": "PostalAddress",
@@ -215,7 +215,7 @@ const Home = () => {
             <h1>Pronto Intervento Fabbro <br /> Milano e Provincia</h1>
             <p>Emergenza Fabbro 24h? Interveniamo in 30 minuti in tutta Milano per apertura porte bloccate, cambio serrature e riparazioni urgenti.</p>
             <div className="hero-cta">
-              <a href="tel:+390612345678" className="btn-primary" title="Chiama Subito Fabbro Milano">Chiama Ora: 06 12345678</a>
+              <a href="tel:+393923842491" className="btn-primary" title="Chiama Subito Fabbro Milano">Chiama Ora: 392 3842491</a>
               <Link to="/contatti" className="btn-secondary">Richiedi Preventivo</Link>
             </div>
           </div>
@@ -401,7 +401,7 @@ const Home = () => {
             <h2>Emergenza Fabbro? Interveniamo Subito!</h2>
             <p>Hai la porta bloccata, serratura rotta o hai perso le chiavi? Il nostro servizio di pronto intervento è attivo per risolvere ogni tua urgenza in tempi rapidi.</p>
             <div className="cta-buttons">
-              <a href="tel:+390612345678" className="btn-primary btn-call">
+              <a href="tel:+393923842491" className="btn-primary btn-call">
                 <i className="fas fa-phone-alt"></i> Chiamaci Ora
               </a>
               <Link to="/preventivo" className="btn-secondary btn-quote">
@@ -558,7 +558,7 @@ const Home = () => {
                       </div>
                       <div className="detail-content">
                         <h3>Telefono</h3>
-                        <p>+39 06 1234567<br />+39 333 1234567</p>
+                        <p>+39 392 3842491</p>
                       </div>
                     </div>
 
@@ -612,12 +612,12 @@ const Home = () => {
       {/* Quick Contact Floating Button */}
       <div className={`floating-contact ${isContactOpen ? 'active' : ''}`}>
         <div className="contact-bubble whatsapp">
-          <a href="https://wa.me/390612345678" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <a href="https://wa.me/393923842491" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
             <i className="fab fa-whatsapp"></i>
           </a>
         </div>
         <div className="contact-bubble phone">
-          <a href="tel:+390612345678" aria-label="Chiama">
+          <a href="tel:+393923842491" aria-label="Chiama">
             <i className="fas fa-phone-alt"></i>
           </a>
         </div>

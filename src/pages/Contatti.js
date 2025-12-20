@@ -19,7 +19,7 @@ const Contatti = () => {
 
   const handleWhatsAppClick = () => {
     // Numero di telefono per WhatsApp (sostituisci con il numero reale)
-    const phoneNumber = "+390123456789"; // Esempio, da sostituire
+    const phoneNumber = "+393923842491"; // Esempio, da sostituire
     // Messaggio predefinito (opzionale)
     const message = "Ciao! Sono interessato ai vostri servizi.";
     // Crea URL per WhatsApp
@@ -55,7 +55,7 @@ const Contatti = () => {
                   <i className="fas fa-phone-alt"></i>
                   <div>
                     <h3>Telefono</h3>
-                    <p>+39 06 1234567</p> {/* Esempio, da sostituire */}
+                    <p>+39 392 3842491</p> {/* Esempio, da sostituire */}
                   </div>
                 </div>
 
