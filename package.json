@@ -2,7 +2,7 @@
   "name": "ferramenta-abc",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nicolamaraschi.github.io/website-client-ferramenta",
+  "homepage": ".",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@formspree/react": "^3.0.0",
