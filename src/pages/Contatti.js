@@ -24,9 +24,11 @@ const Contatti = () => {
 
   return (
     <div className="contatti-page">
-      {/* Hero Section */}
       <section className="contatti-hero">
-        <div className="contatti-hero-bg"></div>
+        <div 
+          className="contatti-hero-bg" 
+          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/consulenza.jpeg)` }}
+        ></div>
         <div className="contatti-hero-content">
           <h1>Contatti</h1>
           <p>Siamo a tua disposizione 24/7. Chiamaci o scrivici per un intervento rapido a Milano e provincia.</p>
