@@ -239,13 +239,11 @@ const Home = () => {
           <div className="intro-content">
             <div className="intro-text">
               <p>
-                Cerchi un <strong>Fabbro a Milano</strong> affidabile e veloce? Da oltre 10 anni, la <strong>Carratu'Aniello</strong> è il punto di riferimento per il <strong>pronto intervento fabbro a Milano</strong>.
-                Siamo operativi 24 ore su 24, 7 giorni su 7, per risolvere qualsiasi problema di sicurezza: dall'apertura di porte blindate bloccate alla sostituzione di serrature danneggiate.
-                Offriamo prodotti di alta qualità e servizi professionali per garantire la massima sicurezza della tua casa o azienda in tutta la provincia di Milano.
+                Il tuo <strong>Fabbro a Milano</strong> di fiducia per emergenze e sicurezza. 
+                Offriamo <strong>pronto intervento 24h</strong> su tutta la provincia per <strong>apertura porte bloccate</strong>, <strong>sostituzione serrature</strong> e riparazioni urgenti.
               </p>
               <p>
-                Il nostro team di esperti è sempre pronto a consigliarti le soluzioni più adatte
-                alle tue esigenze, con attenzione alla qualità e al design.
+                Interventi rapidi, professionalità garantita e massima sicurezza per la tua casa o azienda.
               </p>
 
               <div className="intro-features">
