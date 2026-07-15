@@ -559,7 +559,7 @@ const Home = () => {
                       </div>
                       <div className="detail-content">
                         <h3>Orari</h3>
-                        <p>Lun-Ven: 9:00 - 18:00<br />Sab: 9:00 - 13:00</p>
+                        <p>Pronto Intervento:<br />24h su 24, 7 giorni su 7</p>
                       </div>
                     </div>
                   </div>
