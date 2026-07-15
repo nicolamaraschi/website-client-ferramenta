@@ -114,9 +114,12 @@ const Preventivo = () => {
   // Opzioni per il select della tipologia di lavoro
   const tipiDiLavoro = [
     { value: '', label: 'Seleziona...' },
-    { value: 'riparazione-porte', label: 'Riparazione Porte' },
-    { value: 'installazione-serrature', label: 'Installazione Serrature' },
-    // ... (altre opzioni)
+    { value: 'apertura-porte', label: 'Pronto Intervento Apertura Porte' },
+    { value: 'zanzariere-tapparelle', label: 'Zanzariere, Tapparelle e Infissi' },
+    { value: 'basculanti-saracinesche', label: 'Basculanti e Saracinesche Motorizzate' },
+    { value: 'demolizione-soppalchi', label: 'Demolizione e Soppalchi' },
+    { value: 'riparazione-inferriate', label: 'Riparazione Inferriate e Grate' },
+    { value: 'sostituzione-serrature', label: 'Sostituzione Serrature Milano' },
     { value: 'altro', label: 'Altro (specificare nella descrizione)' }
   ];
   

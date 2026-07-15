@@ -1,8 +1,8 @@
 :root {
-  --primary-blue: var(--primary-blue);
-  --secondary-blue: var(--secondary-blue);
-  --primary-gold: var(--primary-gold);
-  --hover-gold: var(--hover-gold);
+  --primary-blue: #1a2a3a;
+  --secondary-blue: #0d1b2a;
+  --primary-gold: #c9a75d;
+  --hover-gold: #b5954a;
   --bg-light: #f8f9fa;
   --text-dark: #333333;
 }
