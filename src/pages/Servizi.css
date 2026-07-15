@@ -1,75 +1,256 @@
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding-top: 50px;
-    background-color: #f4f4f4;
+/* Premium Servizi Page Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+.servizi-page {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f8f9fa;
+  padding-top: 80px; /* offset per navbar */
+  min-height: 100vh;
 }
 
-section#servizi {
-    padding: 40px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 10px;
-    max-width: 1200px;
+/* Hero Section */
+.servizi-hero {
+  position: relative;
+  background: linear-gradient(135deg, #1a2a3a 0%, #0d1b2a 100%);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden;
 }
 
-section#servizi h2 {
-    color: #333;
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 30px;
-    font-family: 'Georgia', serif;
+.servizi-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 70%);
+  pointer-events: none;
 }
 
-.services-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+.servizi-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.service-item {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    width: calc(50% - 20px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.servizi-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #c9a75d; /* Oro brand */
 }
 
-.service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+.servizi-hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.9;
 }
 
-.service-item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
+/* List Section */
+.servizi-list-section {
+  padding: 80px 0;
 }
 
-.service-item h3 {
-    color: #333;
-    font-size: 1.5rem;
-    margin: 10px 0;
-    font-family: 'Georgia', serif;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.service-item p {
-    color: #666;
-    line-height: 1.6;
-    font-size: 1rem;
+.servizi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 
-/* Responsive Design */
+.servizi-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.servizi-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.servizi-card-image {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.servizi-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.servizi-card:hover .servizi-card-image img {
+  transform: scale(1.08);
+}
+
+.servizi-icon {
+  position: absolute;
+  bottom: -25px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #c9a75d;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 5px 15px rgba(201, 167, 93, 0.4);
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.servizi-card:hover .servizi-icon {
+  transform: rotate(360deg);
+}
+
+.servizi-card-content {
+  padding: 40px 30px 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.servizi-card-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #1a2a3a;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.servizi-card-content p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.servizi-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #1a2a3a;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+}
+
+.servizi-btn i {
+  transition: transform 0.3s ease;
+  color: #c9a75d;
+}
+
+.servizi-btn:hover {
+  color: #c9a75d;
+}
+
+.servizi-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* CTA Section */
+.servizi-cta {
+  background-color: #1a2a3a;
+  padding: 60px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.servizi-cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #c9a75d;
+}
+
+.servizi-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-call, .btn-contact {
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-call {
+  background: #c9a75d;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(201, 167, 93, 0.4);
+}
+
+.btn-call:hover {
+  background: #b5954a;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.btn-contact {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #c9a75d;
+}
+
+.btn-contact:hover {
+  background: rgba(201, 167, 93, 0.1);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .servizi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
-    .service-item {
-        width: calc(100% - 20px);
-    }
+  .servizi-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .servizi-hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .servizi-cta h2 {
+    font-size: 2rem;
+  }
 }

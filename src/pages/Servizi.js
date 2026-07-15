@@ -1,33 +1,108 @@
-import React from 'react';
-import './Servizi.css'; // Assicurati che il file CSS sia nella directory corretta
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import './Servizi.css';
 
 const Servizi = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const services = [
+    {
+      title: "Pronto Intervento Apertura Porte",
+      description: "Apertura porte bloccate senza scasso. Intervento rapido fabbro Milano centro e provincia. Tecniche avanzate per non danneggiare infissi e serrature.",
+      image: "aperturaPorte.jpg",
+      icon: "fa-door-open"
+    },
+    {
+      title: "Zanzariere, Tapparelle e Infissi",
+      description: "Installazione e riparazione di zanzariere, tapparelle, infissi e tende da esterni. Sostituzione cinghie e motorizzazione tapparelle per la tua comodità.",
+      image: "sblocco.jpg",
+      icon: "fa-window-maximize"
+    },
+    {
+      title: "Basculanti e Saracinesche Motorizzate",
+      description: "Assistenza tecnica per porte basculanti per box auto e saracinesche negozi motorizzate. Riparazioni urgenti per non bloccare mai la tua attività.",
+      image: "serrande.jpg",
+      icon: "fa-warehouse"
+    },
+    {
+      title: "Demolizione e Soppalchi",
+      description: "Demolizione e costruzione soppalchi su misura. Lavorazioni in ferro artigianali per ringhiere e balconi, unendo design e massima robustezza.",
+      image: "riparazioneCancelli.jpg",
+      icon: "fa-hammer"
+    },
+    {
+      title: "Riparazione Inferriate e Grate",
+      description: "Installazione e riparazione inferriate di sicurezza per finestre e balconi a Milano. Metti in sicurezza la tua casa con prodotti certificati antieffrazione.",
+      image: "inferiata.jpeg",
+      icon: "fa-shield-alt"
+    },
+    {
+      title: "Sostituzione Serrature Milano",
+      description: "Cambio serrature immediato, aggiornamento e conversione da vecchia serratura a doppia mappa a cilindro europeo ad alta sicurezza con defender.",
+      image: "portaBlindata.webp",
+      icon: "fa-key"
+    }
+  ];
+
   return (
-    <section id="servizi">
-      <h2>I nostri servizi ✨</h2>
-      <div className="services-grid">
-        <div className="service-item">
-          <img src={`${process.env.PUBLIC_URL}/images/manutenzione.jpeg`} alt="Manutenzione impianti" />
-          <h3>Manutenzione impianti 🔧</h3>
-          <p>Servizi di manutenzione e assistenza su impianti industriali e domestici, con interventi rapidi e qualificati.</p>
+    <div className="servizi-page">
+      <Helmet>
+        <title>Servizi Fabbro Milano | Apertura Porte, Serrature, Tapparelle</title>
+        <meta name="description" content="Scopri tutti i servizi del Fabbro Milano Carratù Aniello: pronto intervento, apertura porte, zanzariere, soppalchi, inferriate e saracinesche." />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="servizi-hero">
+        <div className="servizi-hero-content">
+          <h1>I Nostri Servizi</h1>
+          <p>Professionalità, precisione e intervento rapido per garantirti la massima sicurezza 24 ore su 24.</p>
         </div>
-        <div className="service-item">
-          <img src={`${process.env.PUBLIC_URL}/images/riparazione.jpeg`} alt="Riparazioni specializzate" />
-          <h3>Riparazioni specializzate ⚙️</h3>
-          <p>Riparazioni di attrezzature e strumenti con garanzia di qualità e durabilità nel tempo. Assistenza su misura per ogni necessità.</p>
+      </section>
+
+      {/* Services Grid */}
+      <section className="servizi-list-section">
+        <div className="container">
+          <div className="servizi-grid">
+            {services.map((service, index) => (
+              <div className="servizi-card" key={index}>
+                <div className="servizi-card-image">
+                  <img src={`${process.env.PUBLIC_URL}/images/${service.image}`} alt={service.title} />
+                  <div className="servizi-icon">
+                    <i className={`fas ${service.icon}`}></i>
+                  </div>
+                </div>
+                <div className="servizi-card-content">
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                  <Link to="/preventivo" className="servizi-btn">
+                    Richiedi Preventivo <i className="fas fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="service-item">
-          <img src={`${process.env.PUBLIC_URL}/images/consulenza.jpeg`} alt="Consulenza tecnica" />
-          <h3>Consulenza tecnica 🧠</h3>
-          <p>Consulenza personalizzata per scegliere le migliori soluzioni tecniche e materiali per i tuoi progetti.</p>
+      </section>
+
+      {/* CTA Section */}
+      <section className="servizi-cta">
+        <div className="container">
+          <h2>Hai un'emergenza o vuoi un sopralluogo?</h2>
+          <p>Il nostro team di esperti è pronto ad aiutarti per qualsiasi problema di sicurezza o riparazione.</p>
+          <div className="cta-actions">
+            <a href="tel:+393923842491" className="btn-call">
+              <i className="fas fa-phone-alt"></i> Chiama Ora 
+            </a>
+            <Link to="/contatti" className="btn-contact">
+              Contattaci
+            </Link>
+          </div>
         </div>
-        <div className="service-item">
-          <img src={`${process.env.PUBLIC_URL}/images/istallazione.jpeg`} alt="Installazioni" />
-          <h3>Installazioni 🛠️</h3>
-          <p>Installazione di impianti e attrezzature con personale altamente qualificato, per garantirti sicurezza e affidabilità.</p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
