@@ -421,10 +421,10 @@ const Home = () => {
 
           <div className="portfolio-gallery">
             <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/riparazioneCancelli.jpg`} alt="Installazione Cancello" />
+              <img src={`${process.env.PUBLIC_URL}/images/riparazioneCancelli.jpg`} alt="Soppalchi e Demolizioni" />
               <div className="gallery-overlay">
                 <div className="gallery-info">
-                  <h3>Installazione Cancello</h3>
+                  <h3>Soppalchi su Misura</h3>
                   <p>Milano, 2023</p>
                   <span className="gallery-icon">
                     <i className="fas fa-plus"></i>
@@ -434,10 +434,10 @@ const Home = () => {
             </div>
 
             <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/portaBlindata.webp`} alt="Porta Blindata Moderna" />
+              <img src={`${process.env.PUBLIC_URL}/images/portaBlindata.webp`} alt="Sostituzione Serrature" />
               <div className="gallery-overlay">
                 <div className="gallery-info">
-                  <h3>Porta Blindata Moderna</h3>
+                  <h3>Sostituzione Serrature</h3>
                   <p>Milano, 2023</p>
                   <span className="gallery-icon">
                     <i className="fas fa-plus"></i>
@@ -447,10 +447,10 @@ const Home = () => {
             </div>
 
             <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/aperturaPorte.jpg`} alt="Apertura Porta Bloccata" />
+              <img src={`${process.env.PUBLIC_URL}/images/aperturaPorte.jpg`} alt="Apertura Porta Senza Scasso" />
               <div className="gallery-overlay">
                 <div className="gallery-info">
-                  <h3>Apertura Porta Bloccata</h3>
+                  <h3>Apertura Porte Bloccate</h3>
                   <p>Milano, 2023</p>
                   <span className="gallery-icon">
                     <i className="fas fa-plus"></i>
@@ -460,10 +460,10 @@ const Home = () => {
             </div>
 
             <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/sblocco.jpg`} alt="Sblocco Tapparelle" />
+              <img src={`${process.env.PUBLIC_URL}/images/sblocco.jpg`} alt="Zanzariere e Infissi" />
               <div className="gallery-overlay">
                 <div className="gallery-info">
-                  <h3>Sblocco Tapparelle</h3>
+                  <h3>Zanzariere e Infissi</h3>
                   <p>Milano, 2023</p>
                   <span className="gallery-icon">
                     <i className="fas fa-plus"></i>
@@ -473,10 +473,10 @@ const Home = () => {
             </div>
 
             <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/inferiata.jpeg`} alt="Inferriata Decorativa" />
+              <img src={`${process.env.PUBLIC_URL}/images/inferiata.jpeg`} alt="Riparazione Inferriate" />
               <div className="gallery-overlay">
                 <div className="gallery-info">
-                  <h3>Inferriata Decorativa</h3>
+                  <h3>Riparazione Inferriate</h3>
                   <p>Milano, 2022</p>
                   <span className="gallery-icon">
                     <i className="fas fa-plus"></i>
@@ -486,10 +486,10 @@ const Home = () => {
             </div>
 
             <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/serranda.webp`} alt="Serranda Commerciale" />
+              <img src={`${process.env.PUBLIC_URL}/images/serranda.webp`} alt="Saracinesche Motorizzate" />
               <div className="gallery-overlay">
                 <div className="gallery-info">
-                  <h3>Serranda Commerciale</h3>
+                  <h3>Saracinesche Motorizzate</h3>
                   <p>Milano, 2022</p>
                   <span className="gallery-icon">
                     <i className="fas fa-plus"></i>
