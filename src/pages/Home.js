@@ -268,7 +268,7 @@ const Home = () => {
             </div>
 
             <div className="intro-image">
-              <img src={`${process.env.PUBLIC_URL}/images/consulenza.jpeg`} alt="Fabbro Milano Pronto Intervento Carratu'Aniello" />
+              <img src={`${process.env.PUBLIC_URL}/images/logo2.png`} alt="Fabbro Milano Pronto Intervento Carratu'Aniello" />
               <div className="intro-badge">
                 <span className="years">40+</span>
                 <span className="text">Anni di<br />Esperienza</span>
