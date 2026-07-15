@@ -54,7 +54,7 @@ const Home = () => {
       "opens": "00:00",
       "closes": "23:59"
     },
-    "description": "Pronto intervento fabbro Milano 24h per apertura porte, cambio serrature, riparazione tapparelle e serrande. Arrivo in 30 minuti."
+    "description": "Pronto intervento fabbro Milano 24h per apertura porte, cambio serrature, riparazione tapparelle e serrande."
   };
 
   // Stato per il floating contact menu
@@ -153,9 +153,19 @@ const Home = () => {
       images: ["aperturaPorte.jpg", "aperturaPorte.jpg", "aperturaPorte.jpg"]
     },
     {
-      title: "Sostituzione Serrature Milano",
-      description: "Cambio serrature immediato, conversione serratura doppia mappa a cilindro europeo di sicurezza.",
-      images: ["portaBlindata.webp", "portaBlindata.webp", "portaBlindata.webp"]
+      title: "Zanzariere, Tapparelle e Infissi",
+      description: "Installazione e riparazione di zanzariere, tapparelle, infissi e tende da esterni.",
+      images: ["sblocco.jpg", "sblocco.jpg", "sblocco.jpg"]
+    },
+    {
+      title: "Basculanti e Saracinesche Motorizzate",
+      description: "Assistenza tecnica per porte basculanti per box auto e saracinesche negozi motorizzate.",
+      images: ["serrande.jpg", "serrande.jpg", "serrande.jpg"]
+    },
+    {
+      title: "Demolizione e Soppalchi",
+      description: "Demolizione e costruzione soppalchi su misura. Lavorazioni in ferro per ringhiere e balconi.",
+      images: ["riparazioneCancelli.jpg", "riparazioneCancelli.jpg", "riparazioneCancelli.jpg"]
     },
     {
       title: "Riparazione Inferriate e Grate",
@@ -163,19 +173,9 @@ const Home = () => {
       images: ["inferiata.jpeg", "inferiata.jpeg", "inferiata.jpeg"]
     },
     {
-      title: "Riparazione Cancelli Automatici",
-      description: "Assistenza tecnica per cancelli elettrici e recinzioni. Manutenzione ordinaria e straordinaria.",
-      images: ["riparazioneCancelli.jpg", "riparazioneCancelli.jpg", "riparazioneCancelli.jpg"]
-    },
-    {
-      title: "Sblocco Tapparelle e Persiane",
-      description: "Fabbro per sblocco tapparelle incastrate, sostituzione cinghie e motorizzazione tapparelle.",
-      images: ["sblocco.jpg", "sblocco.jpg", "sblocco.jpg"]
-    },
-    {
-      title: "Serrande Negozi Milano",
-      description: "Riparazione e sblocco serrande metalliche per negozi e box auto. Intervento urgente h24.",
-      images: ["serrande.jpg", "serrande.jpg", "serrande.jpg"]
+      title: "Sostituzione Serrature Milano",
+      description: "Cambio serrature immediato, conversione serratura doppia mappa a cilindro europeo.",
+      images: ["portaBlindata.webp", "portaBlindata.webp", "portaBlindata.webp"]
     }
   ];
 
@@ -193,7 +193,7 @@ const Home = () => {
     <div className="home-page">
       <Helmet>
         <title>Pronto Intervento Fabbro Milano 24h | Apertura Porte e Cambio Serrature</title>
-        <meta name="description" content="Cerchi un Fabbro a Milano? Pronto Intervento Fabbro 24h per apertura porte bloccate, cambio serrature, sblocco tapparelle e serrande. Arrivo in 30 minuti!" />
+        <meta name="description" content="Cerchi un Fabbro a Milano? Pronto Intervento Fabbro 24h per apertura porte bloccate, cambio serrature, sblocco tapparelle e serrande." />
         <link rel="canonical" href="https://nicolamaraschi.github.io/website-client-ferramenta" />
         <meta name="keywords" content="fabbro milano, pronto intervento fabbro milano, apertura porte milano, cambio serratura milano, fabbro urgente" />
       </Helmet>
@@ -213,7 +213,7 @@ const Home = () => {
           <div className="hero-overlay"></div>
           <div className="hero-content">
             <h1>Pronto Intervento Fabbro <br /> Milano e Provincia</h1>
-            <p>Emergenza Fabbro 24h? Interveniamo in 30 minuti in tutta Milano per apertura porte bloccate, cambio serrature e riparazioni urgenti.</p>
+            <p>Emergenza Fabbro 24h? Interveniamo in tutta Milano per apertura porte bloccate, cambio serrature e riparazioni urgenti.</p>
             <div className="hero-cta">
               <a href="tel:+393923842491" className="btn-primary" title="Chiama Subito Fabbro Milano">Chiama Ora: 392 3842491</a>
               <Link to="/preventivo" className="btn-secondary">Richiedi Preventivo</Link>
@@ -268,9 +268,9 @@ const Home = () => {
             </div>
 
             <div className="intro-image">
-              <img src={`${process.env.PUBLIC_URL}/images/logo2.png`} alt="Fabbro Milano Pronto Intervento Carratu'Aniello" />
+              <img src={`${process.env.PUBLIC_URL}/images/consulenza.jpeg`} alt="Fabbro Milano Pronto Intervento Carratu'Aniello" />
               <div className="intro-badge">
-                <span className="years">10+</span>
+                <span className="years">40+</span>
                 <span className="text">Anni di<br />Esperienza</span>
               </div>
             </div>
