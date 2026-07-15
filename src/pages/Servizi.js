@@ -40,8 +40,8 @@ const Servizi = () => {
       icon: "fa-shield-alt"
     },
     {
-      title: "Sostituzione Serrature Milano",
-      description: "Cambio serrature immediato, aggiornamento e conversione da vecchia serratura a doppia mappa a cilindro europeo ad alta sicurezza con defender.",
+      title: "Porte Blindate e Serrature",
+      description: "Installazione porte blindate su misura. Cambio serrature immediato, aggiornamento e conversione da vecchia serratura a doppia mappa a cilindro europeo ad alta sicurezza.",
       image: "portaBlindata.webp",
       icon: "fa-key"
     }

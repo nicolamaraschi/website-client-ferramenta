@@ -173,8 +173,8 @@ const Home = () => {
       images: ["inferiata.jpeg", "inferiata.jpeg", "inferiata.jpeg"]
     },
     {
-      title: "Sostituzione Serrature Milano",
-      description: "Cambio serrature immediato, conversione serratura doppia mappa a cilindro europeo.",
+      title: "Porte Blindate e Serrature",
+      description: "Installazione porte blindate su misura. Cambio serrature immediato, conversione serratura doppia mappa a cilindro europeo.",
       images: ["portaBlindata.webp", "portaBlindata.webp", "portaBlindata.webp"]
     }
   ];

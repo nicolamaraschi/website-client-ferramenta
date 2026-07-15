@@ -119,7 +119,7 @@ const Preventivo = () => {
     { value: 'basculanti-saracinesche', label: 'Basculanti e Saracinesche Motorizzate' },
     { value: 'demolizione-soppalchi', label: 'Demolizione e Soppalchi' },
     { value: 'riparazione-inferriate', label: 'Riparazione Inferriate e Grate' },
-    { value: 'sostituzione-serrature', label: 'Sostituzione Serrature Milano' },
+    { value: 'porte-blindate-serrature', label: 'Porte Blindate e Serrature' },
     { value: 'altro', label: 'Altro (specificare nella descrizione)' }
   ];
   
