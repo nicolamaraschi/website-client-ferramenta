@@ -23,13 +23,6 @@ const Home = () => {
     "image": `${process.env.PUBLIC_URL}/images/logo2.png`,
     "telephone": "+393923842491",
     "url": "https://nicolamaraschi.github.io/website-client-ferramenta",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Via Vergato 11",
-      "addressLocality": "Milano",
-      "postalCode": "20161",
-      "addressCountry": "IT"
-    },
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": 45.4642,
@@ -540,16 +533,6 @@ const Home = () => {
                   <p>Siamo a tua disposizione per offrirti consulenza, supporto e preventivi gratuiti per tutti i tuoi progetti.</p>
 
                   <div className="contact-mini-details">
-                    <div className="mini-detail">
-                      <div className="detail-icon">
-                        <i className="fas fa-map-marker-alt"></i>
-                      </div>
-                      <div className="detail-content">
-                        <h3>Indirizzo</h3>
-                        <p>Via Vergato 11<br />20161 Milano, MI</p>
-                      </div>
-                    </div>
-
                     <div className="mini-detail">
                       <div className="detail-icon">
                         <i className="fas fa-phone-alt"></i>

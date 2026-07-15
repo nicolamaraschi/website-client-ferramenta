@@ -1,19 +1,7 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
 import './Contatti.css';
 
-// Fix per icone Leaflet
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
-  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-});
-
 const Contatti = () => {
-  const position = [45.4773, 9.1815]; // Milano
 
   const handleWhatsAppClick = () => {
     const phoneNumber = "+393923842491"; 
@@ -38,86 +26,51 @@ const Contatti = () => {
       {/* Main Content */}
       <section className="contatti-main">
         <div className="container">
-          <div className="row g-5 align-items-center">
-            
-            {/* Left: Contact Info */}
-            <div className="col-lg-5">
-              <div className="premium-contact-card">
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+              <div className="premium-contact-card text-center" style={{ padding: '40px' }}>
                 <div className="card-header">
                   <h2>I Nostri Recapiti</h2>
-                  <div className="accent-line"></div>
+                  <div className="accent-line mx-auto"></div>
                 </div>
 
-                <div className="contact-details">
-                  <div className="contact-item">
-                    <div className="icon-box">
-                      <i className="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div className="item-text">
-                      <h4>Sede Operativa</h4>
-                      <p>Via Vergato 11, 20161 Milano (MI)</p>
-                    </div>
-                  </div>
-
-                  <div className="contact-item">
+                <div className="contact-details d-flex flex-column align-items-center">
+                  <div className="contact-item w-100 justify-content-center">
                     <div className="icon-box">
                       <i className="fas fa-phone-alt"></i>
                     </div>
-                    <div className="item-text">
+                    <div className="item-text text-start ms-3">
                       <h4>Pronto Intervento</h4>
                       <p className="highlight-text">+39 392 3842491</p>
                     </div>
                   </div>
 
-                  <div className="contact-item">
+                  <div className="contact-item w-100 justify-content-center">
                     <div className="icon-box">
                       <i className="fas fa-envelope"></i>
                     </div>
-                    <div className="item-text">
+                    <div className="item-text text-start ms-3">
                       <h4>Email</h4>
                       <p>info@carratuaniello.it</p>
                     </div>
                   </div>
 
-                  <div className="contact-item">
+                  <div className="contact-item w-100 justify-content-center">
                     <div className="icon-box">
                       <i className="fas fa-clock"></i>
                     </div>
-                    <div className="item-text">
+                    <div className="item-text text-start ms-3">
                       <h4>Orari di Lavoro</h4>
-                      <p>Lunedì - Venerdì: 9:00 - 18:00<br/>Sabato: 9:00 - 13:00<br/><strong>Emergenze: 24h/24</strong></p>
+                      <p>Pronto Intervento: 24h su 24, 7 giorni su 7</p>
                     </div>
                   </div>
                 </div>
 
-                <button className="premium-whatsapp-btn" onClick={handleWhatsAppClick}>
+                <button className="premium-whatsapp-btn mt-4" onClick={handleWhatsAppClick}>
                   <i className="fab fa-whatsapp"></i> Chat su WhatsApp
                 </button>
               </div>
             </div>
-
-            {/* Right: Map */}
-            <div className="col-lg-7">
-              <div className="premium-map-wrapper">
-                <MapContainer
-                  center={position}
-                  zoom={13}
-                  scrollWheelZoom={false}
-                  className="leaflet-premium-map"
-                >
-                  <TileLayer
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    attribution='&copy; <a href="https://www.openstreetmap.org/">OSM</a>'
-                  />
-                  <Marker position={position}>
-                    <Popup>
-                      <strong>Carratu' Aniello</strong><br/>Via Vergato 11, Milano
-                    </Popup>
-                  </Marker>
-                </MapContainer>
-              </div>
-            </div>
-
           </div>
         </div>
       </section>

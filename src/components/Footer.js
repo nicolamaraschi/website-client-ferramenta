@@ -31,10 +31,6 @@ const Footer = () => {
               <h5 className="column-title">Contatti</h5>
               <ul className="footer-contacts">
                 <li>
-                  <i className="fas fa-map-marker-alt"></i>
-                  <span>Via Vergato 11, 20161 Milano MI</span>
-                </li>
-                <li>
                   <i className="fas fa-phone-alt"></i>
                   <span>+39 392 3842491</span>
                 </li>
