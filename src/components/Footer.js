@@ -12,7 +12,7 @@ const Footer = () => {
               <span className="logo-accent">Aniello</span>
             </div>
             <p className="brand-description">
-              Servizi professionali di serrature e chiavi con oltre 15 anni di esperienza.
+              Servizi professionali di serrature e chiavi con oltre 40 anni di esperienza.
             </p>
           </div>
 
