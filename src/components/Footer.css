@@ -41,7 +41,7 @@
   font-family: 'Cinzel', serif;
   font-size: 2.2rem;
   font-weight: 700;
-  color: #d4af37;
+  color: var(--primary-gold);
   margin-left: 10px;
   letter-spacing: 1px;
 }
@@ -81,7 +81,7 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background-color: #d4af37;
+  background-color: var(--primary-gold);
 }
 
 .footer-links {
@@ -103,7 +103,7 @@
 }
 
 .footer-links a:hover {
-  color: #d4af37;
+  color: var(--primary-gold);
   padding-left: 5px;
 }
 
@@ -122,7 +122,7 @@
 }
 
 .footer-contacts li i {
-  color: #d4af37;
+  color: var(--primary-gold);
   margin-right: 12px;
   width: 20px;
   text-align: center;
@@ -145,7 +145,7 @@
 .footer-divider {
   width: 50px;
   height: 2px;
-  background-color: #d4af37;
+  background-color: var(--primary-gold);
   margin: 15px auto;
 }
 

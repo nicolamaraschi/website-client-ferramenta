@@ -58,7 +58,7 @@
 .logo-accent {
   font-size: 2rem;
   font-weight: 700;
-  color: #d4af37; /* Gold accent color */
+  color: var(--primary-gold); /* Gold accent color */
   margin-left: 5px;
   letter-spacing: 1px;
 }
@@ -114,7 +114,7 @@
   left: 50%;
   width: 0;
   height: 2px;
-  background: #d4af37;
+  background: var(--primary-gold);
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -145,7 +145,7 @@
   padding: 12px 20px;
   background: rgba(212, 175, 55, 0.3);
   color: #333;
-  border: 1px solid #d4af37;
+  border: 1px solid var(--primary-gold);
   border-radius: 50px;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.9rem;
@@ -159,7 +159,7 @@
 .scrolled .phone-cta {
   background: rgba(212, 175, 55, 0.15);
   color: #212529;
-  border-color: #d4af37;
+  border-color: var(--primary-gold);
 }
 
 .phone-cta svg {
@@ -167,7 +167,7 @@
 }
 
 .phone-cta:hover {
-  background: #d4af37;
+  background: var(--primary-gold);
   color: #000;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
@@ -288,8 +288,8 @@
   }
   
   .navbar-link.active {
-    color: #0056b3; /* Blu invece di nero su mobile */
-    border-left: 3px solid #d4af37; /* Barra laterale per link attivo */
+    color: var(--primary-blue); /* Blu invece di nero su mobile */
+    border-left: 3px solid var(--primary-gold); /* Barra laterale per link attivo */
     padding-left: 10px; /* Spazio per la barra */
   }
   

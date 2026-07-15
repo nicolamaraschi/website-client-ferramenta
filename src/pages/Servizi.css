@@ -11,7 +11,7 @@
 /* Hero Section */
 .servizi-hero {
   position: relative;
-  background: linear-gradient(135deg, #1a2a3a 0%, #0d1b2a 100%);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
   color: #fff;
   padding: 80px 20px;
   text-align: center;
@@ -38,7 +38,7 @@
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #c9a75d; /* Oro brand */
+  color: var(--primary-gold); /* Oro brand */
 }
 
 .servizi-hero-content p {
@@ -103,7 +103,7 @@
   right: 30px;
   width: 50px;
   height: 50px;
-  background: #c9a75d;
+  background: var(--primary-gold);
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -129,7 +129,7 @@
 .servizi-card-content h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
-  color: #1a2a3a;
+  color: var(--primary-blue);
   margin-bottom: 15px;
   font-weight: 600;
 }
@@ -146,7 +146,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: #1a2a3a;
+  color: var(--primary-blue);
   font-weight: 600;
   text-decoration: none;
   font-size: 0.95rem;
@@ -156,11 +156,11 @@
 
 .servizi-btn i {
   transition: transform 0.3s ease;
-  color: #c9a75d;
+  color: var(--primary-gold);
 }
 
 .servizi-btn:hover {
-  color: #c9a75d;
+  color: var(--primary-gold);
 }
 
 .servizi-btn:hover i {
@@ -169,7 +169,7 @@
 
 /* CTA Section */
 .servizi-cta {
-  background-color: #1a2a3a;
+  background-color: var(--primary-blue);
   padding: 60px 0;
   text-align: center;
   color: #fff;
@@ -179,7 +179,7 @@
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #c9a75d;
+  color: var(--primary-gold);
 }
 
 .servizi-cta p {
@@ -211,13 +211,13 @@
 }
 
 .btn-call {
-  background: #c9a75d;
+  background: var(--primary-gold);
   color: #fff;
   box-shadow: 0 4px 15px rgba(201, 167, 93, 0.4);
 }
 
 .btn-call:hover {
-  background: #b5954a;
+  background: var(--hover-gold);
   transform: translateY(-2px);
   color: #fff;
 }
@@ -225,7 +225,7 @@
 .btn-contact {
   background: transparent;
   color: #fff;
-  border: 2px solid #c9a75d;
+  border: 2px solid var(--primary-gold);
 }
 
 .btn-contact:hover {

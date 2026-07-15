@@ -95,7 +95,7 @@
 .accent-line {
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #0056b3, #00a8ff);
+  background: linear-gradient(90deg, var(--primary-blue), #00a8ff);
   border-radius: 2px;
   margin-bottom: 40px;
 }
@@ -121,14 +121,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0056b3;
+  color: var(--primary-blue);
   font-size: 1.5rem;
   flex-shrink: 0;
   transition: all 0.3s ease;
 }
 
 .contact-item:hover .icon-box {
-  background: #0056b3;
+  background: var(--primary-blue);
   color: #ffffff;
   transform: scale(1.05);
 }
@@ -151,7 +151,7 @@
 
 .item-text .highlight-text {
   font-weight: 700;
-  color: #0056b3;
+  color: var(--primary-blue);
   font-size: 1.2rem;
 }
 

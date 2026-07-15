@@ -13,7 +13,7 @@
 .preventivo-header {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #0056b3, #00337a);
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
   color: white;
   margin-bottom: 50px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -56,7 +56,7 @@
 .form-card h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
-  color: #0056b3;
+  color: var(--primary-blue);
   margin-bottom: 25px;
   position: relative;
   padding-bottom: 10px;
@@ -69,7 +69,7 @@
   left: 0;
   width: 50px;
   height: 3px;
-  background: #0056b3;
+  background: var(--primary-blue);
 }
 
 /* Stile per i form floating */
@@ -87,7 +87,7 @@
 }
 
 .form-control:focus, .form-select:focus {
-  border-color: #0056b3;
+  border-color: var(--primary-blue);
   box-shadow: 0 0 0 0.25rem rgba(0, 86, 179, 0.15);
 }
 
@@ -124,8 +124,8 @@ textarea.form-control {
 }
 
 .form-check-input:checked {
-  background-color: #0056b3;
-  border-color: #0056b3;
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
 }
 
 .form-switch .form-check-input {
@@ -139,7 +139,7 @@ textarea.form-control {
 
 /* Pulsante invio */
 .btn-submit {
-  background: #0056b3;
+  background: var(--primary-blue);
   color: white;
   border: none;
   padding: 15px 30px;
@@ -156,7 +156,7 @@ textarea.form-control {
 }
 
 .btn-submit:hover:not(:disabled) {
-  background: #003d7a;
+  background: var(--secondary-blue);
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0, 86, 179, 0.3);
 }
@@ -218,7 +218,7 @@ textarea.form-control {
 
 .info-icon i {
   font-size: 2rem;
-  color: #0056b3;
+  color: var(--primary-blue);
 }
 
 .info-card h4 {

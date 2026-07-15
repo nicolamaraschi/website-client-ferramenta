@@ -3,8 +3,8 @@
 
 /* Reset e variabili CSS */
 :root {
-  --primary-color: #0056b3;
-  --secondary-color: #d4af37;
+  --primary-color: var(--primary-blue);
+  --secondary-color: var(--primary-gold);
   --dark-color: #222222;
   --light-color: #f8f9fa;
   --text-color: #333333;
