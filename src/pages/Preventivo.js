@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useForm, ValidationError } from '@formspree/react'; // Importa da @formspree/react
 import './Preventivo.css';
 
@@ -125,6 +126,10 @@ const Preventivo = () => {
   
   return (
     <div className="preventivo-container">
+      <Helmet>
+        <title>Richiedi un Preventivo | Fabbro Milano</title>
+        <meta name="description" content="Richiedi subito un preventivo gratuito e senza impegno per lavorazioni in ferro, sostituzione serrature o pronto intervento a Milano." />
+      </Helmet>
       <div className="preventivo-header">
         <h1>Richiedi un Preventivo</h1>
         <p>Compila il modulo sottostante per richiedere un preventivo personalizzato</p>

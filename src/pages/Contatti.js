@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import './Contatti.css';
 
 const Contatti = () => {
@@ -12,6 +13,11 @@ const Contatti = () => {
 
   return (
     <div className="contatti-page">
+      <Helmet>
+        <title>Contatti | Fabbro Milano Pronto Intervento 24h</title>
+        <meta name="description" content="Contatta Mastro Nello per un pronto intervento fabbro a Milano e provincia. Siamo disponibili 24h su 24 per emergenze, apertura porte e preventivi gratuiti." />
+      </Helmet>
+
       <section className="contatti-hero">
         <div 
           className="contatti-hero-bg" 
