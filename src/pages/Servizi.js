@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom';
 import './Servizi.css';
 
 const Servizi = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const services = [
     {
       title: "Pronto Intervento Apertura Porte",

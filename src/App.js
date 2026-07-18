@@ -1,5 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingContact from './components/FloatingContact';
@@ -13,6 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Importa Bootstrap
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <main>
         <Routes>
