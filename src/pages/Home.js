@@ -165,7 +165,7 @@ const Home = () => {
     {
       title: "Pronto Intervento Apertura Porte",
       description: "Apertura porte bloccate senza scasso. Intervento rapido fabbro Milano centro e provincia.",
-      images: ["serramentaPorta.png", "fotoNelloCheLavora.png", "nelloFoto1.png"]
+      images: ["riparazione.jpeg"]
     },
     {
       title: "Zanzariere, Tapparelle e Infissi",
@@ -190,14 +190,14 @@ const Home = () => {
     {
       title: "Porte Blindate e Serrature",
       description: "Installazione porte blindate su misura. Cambio serrature immediato, conversione serratura doppia mappa a cilindro europeo.",
-      images: ["serramentaPortaCostruzione.png"]
+      images: ["inferietaportePerEsterno.png"]
     }
   ];
 
   const stats = [
     { count: 100, label: "Lavori Completati" },
     { count: 50, label: "Clienti Soddisfatti" },
-    { count: 10, label: "Anni di Esperienza" }
+    { count: 30, label: "Anni di Esperienza" }
   ];
 
 
@@ -285,7 +285,7 @@ const Home = () => {
             <div className="intro-image">
               <img src={`${process.env.PUBLIC_URL}/images/logoNuovo.png`} alt="Fabbro Milano Pronto Intervento Carratu'Aniello" />
               <div className="intro-badge">
-                <span className="years">40+</span>
+                <span className="years">30+</span>
                 <span className="text">Anni di<br />Esperienza</span>
               </div>
             </div>
@@ -299,7 +299,7 @@ const Home = () => {
             <span className="section-subtitle">Il Nostro Esperto</span>
             <h2 className="section-title">Mastro Fabbro Nello</h2>
             <div className="section-divider"></div>
-            <p className="nello-intro">Anni di esperienza, dedizione e passione per l'artigianato del ferro.</p>
+            <p className="nello-intro">Più di 30 anni di esperienza, dedizione e passione per l'artigianato del ferro.</p>
           </div>
 
           <div className="nello-carousel-container">
