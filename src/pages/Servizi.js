@@ -8,7 +8,7 @@ const Servizi = () => {
     {
       title: "Pronto Intervento Apertura Porte",
       description: "Apertura porte bloccate senza scasso. Intervento rapido fabbro Milano centro e provincia. Tecniche avanzate per non danneggiare infissi e serrature.",
-      image: "riparazione.jpeg",
+      image: "portaEmergenza.jpg",
       icon: "fa-door-open"
     },
     {
@@ -38,7 +38,7 @@ const Servizi = () => {
     {
       title: "Porte Blindate e Serrature",
       description: "Installazione porte blindate su misura. Cambio serrature immediato, aggiornamento e conversione da vecchia serratura a doppia mappa a cilindro europeo ad alta sicurezza.",
-      image: "inferietaportePerEsterno.png",
+      image: "portaBlindata.png",
       icon: "fa-key"
     }
   ];
