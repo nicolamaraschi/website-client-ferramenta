@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import FloatingContact from './components/FloatingContact';
 import Home from './pages/Home';
 import Contatti from './pages/Contatti';
 import Preventivo from './pages/Preventivo';
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/servizi" element={<Servizi />} />
         </Routes>
       </main>
+      <FloatingContact />
       <Footer />
     </Router>
   );

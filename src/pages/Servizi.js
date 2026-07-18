@@ -12,13 +12,13 @@ const Servizi = () => {
     {
       title: "Pronto Intervento Apertura Porte",
       description: "Apertura porte bloccate senza scasso. Intervento rapido fabbro Milano centro e provincia. Tecniche avanzate per non danneggiare infissi e serrature.",
-      image: "aperturaPorte.jpg",
+      image: "serramentaPorta.png",
       icon: "fa-door-open"
     },
     {
       title: "Zanzariere, Tapparelle e Infissi",
       description: "Installazione e riparazione di zanzariere, tapparelle, infissi e tende da esterni. Sostituzione cinghie e motorizzazione tapparelle per la tua comodità.",
-      image: "sblocco.jpg",
+      image: "serramentaFinestra.png",
       icon: "fa-window-maximize"
     },
     {
@@ -30,19 +30,19 @@ const Servizi = () => {
     {
       title: "Demolizione e Soppalchi",
       description: "Demolizione e costruzione soppalchi su misura. Lavorazioni in ferro artigianali per ringhiere e balconi, unendo design e massima robustezza.",
-      image: "demolizioneBarcaNavigli00.png",
+      image: "soppalcoCasaAcciaio.png",
       icon: "fa-hammer"
     },
     {
       title: "Riparazione Inferriate e Grate",
       description: "Installazione e riparazione inferriate di sicurezza per finestre e balconi a Milano. Metti in sicurezza la tua casa con prodotti certificati antieffrazione.",
-      image: "inferiata.jpeg",
+      image: "inferietaResidenziale.png",
       icon: "fa-shield-alt"
     },
     {
       title: "Porte Blindate e Serrature",
       description: "Installazione porte blindate su misura. Cambio serrature immediato, aggiornamento e conversione da vecchia serratura a doppia mappa a cilindro europeo ad alta sicurezza.",
-      image: "portaBlindata.webp",
+      image: "serramentaPortaCostruzione.png",
       icon: "fa-key"
     }
   ];

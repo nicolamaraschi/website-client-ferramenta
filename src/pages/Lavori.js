@@ -33,12 +33,8 @@ const Lavori = () => {
     { category: "Progetti Speciali", title: "Demolizione Barcone Navigli 3", image: "demolizioneBarcaNavigli02.png" },
     { category: "Progetti Speciali", title: "Demolizione Barcone Navigli 4", image: "demolizioneBarcaNavigli03.png" },
     { category: "Cancelli e Recinzioni", title: "Recinzione Verde", image: "RecizioneMetallicaVerde.png" },
-    { category: "Cancelli e Recinzioni", title: "Cancello in Acciaio", image: "cencelloEsternoAcciaio.png" },
     { category: "Cancelli e Recinzioni", title: "Cancello in Ferro", image: "Cancelli.jpeg" },
     { category: "Cancelli e Recinzioni", title: "Riparazione Cancelli", image: "riparazioneCancelli.jpg" },
-    { category: "Serrature", title: "Porta Blindata", image: "portaBlindata.webp" },
-    { category: "Serrature", title: "Apertura Porte", image: "aperturaPorte.jpg" },
-    { category: "Altro", title: "Serranda Motorizzata", image: "serranda.webp" },
     { category: "Altro", title: "Tettoia", image: "tettoiaAlumminioPlexiglass.png" },
   ];
 
@@ -64,7 +60,7 @@ const Lavori = () => {
                 <img src={`${process.env.PUBLIC_URL}/images/demolizioneBarcaNavigli00.png`} alt="Demolizione Barcone Navigli Pavese" />
               </div>
               <div className="featured-img-sub">
-                <img src={`${process.env.PUBLIC_URL}/images/demolizioneBarcaNavigli02.png`} alt="Barcone Navigli 2" />
+                <img src={`${process.env.PUBLIC_URL}/images/demolizioneBarcaNavigli01.png`} alt="Barcone Navigli 1" />
                 <img src={`${process.env.PUBLIC_URL}/images/demolizioneBarcaNavigli03.png`} alt="Barcone Navigli 3" />
               </div>
             </div>

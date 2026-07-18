@@ -31,8 +31,8 @@ const Home = () => {
     { category: "Inferriate e Grate", title: "Inferriata Residenziale", image: "inferietaResidenziale.png" },
     { category: "Infissi e Serramenti", title: "Serramento per Finestra", image: "serramentaFinestra.png" },
     { category: "Cancelli e Recinzioni", title: "Cancello in Ferro", image: "Cancelli.jpeg" },
-    { category: "Serrature", title: "Porta Blindata", image: "portaBlindata.webp" },
-    { category: "Altro", title: "Serranda Motorizzata", image: "serranda.webp" }
+    { category: "Strutture e Lavorazioni", title: "Costruzione Scale", image: "costruzioneScale.png" },
+    { category: "Progetti Speciali", title: "Demolizione Navigli", image: "demolizioneBarcaNavigli00.png" }
   ];
 
   // Schema Markup per Local Business / Fabbro
@@ -40,7 +40,7 @@ const Home = () => {
     "@context": "https://schema.org",
     "@type": "EmergencyService",
     "name": "Carratu'Aniello Fabbro Milano",
-    "image": `${process.env.PUBLIC_URL}/images/logo2.png`,
+    "image": `${process.env.PUBLIC_URL}/images/logoNuovo.png`,
     "telephone": "+393923842491",
     "url": "https://nicolamaraschi.github.io/website-client-ferramenta",
     "geo": {
@@ -69,9 +69,6 @@ const Home = () => {
     },
     "description": "Pronto intervento fabbro Milano 24h per apertura porte, cambio serrature, riparazione tapparelle e serrande."
   };
-
-  // Stato per il floating contact menu
-  const [isContactOpen, setIsContactOpen] = useState(false);
 
   // Stato per il bottone "torna su"
   const [isBackToTopVisible, setIsBackToTopVisible] = useState(false);
@@ -152,9 +149,6 @@ const Home = () => {
     });
   };
 
-  const toggleContactMenu = () => {
-    setIsContactOpen(!isContactOpen);
-  };
 
   const toggleFaq = (index) => {
     setActiveFaq(activeFaq === index ? null : index);
@@ -171,22 +165,22 @@ const Home = () => {
     {
       title: "Pronto Intervento Apertura Porte",
       description: "Apertura porte bloccate senza scasso. Intervento rapido fabbro Milano centro e provincia.",
-      images: ["aperturaPorte.jpg"]
+      images: ["serramentaPorta.png", "fotoNelloCheLavora.png", "nelloFoto1.png"]
     },
     {
       title: "Zanzariere, Tapparelle e Infissi",
       description: "Installazione e riparazione di zanzariere, tapparelle, infissi e tende da esterni.",
-      images: ["sblocco.jpg", "serramentaFinestra.png", "serramentaPorta.png", "serramentaPortaCostruzione.png"]
+      images: ["serramentaFinestra.png", "serramentaPorta.png", "serramentaPortaCostruzione.png"]
     },
     {
       title: "Basculanti e Saracinesche Motorizzate",
       description: "Assistenza tecnica per porte basculanti per box auto e saracinesche negozi motorizzate.",
-      images: ["serranda.webp", "tettoiaAlumminioPlexiglass.png", "RecizioneMetallicaVerde.png", "cencelloEsternoAcciaio.png", "Cancelli.jpeg"]
+      images: ["serrande.jpg", "RecizioneMetallicaVerde.png", "Cancelli.jpeg"]
     },
     {
       title: "Demolizione e Soppalchi",
       description: "Demolizione e costruzione soppalchi su misura. Lavorazioni in ferro per ringhiere e balconi.",
-      images: ["soppalcoCasaAcciaio.png", "CostruzioneTelaioAcciaio.png", "costruzioneAtelierAcciaio.png", "FabbricazioneComponenteCustom.png", "grigliaPavimentoAcciaio.png", "procettoCnnr01.png", "riparazioneCancelli.jpg", "demolizioneBarcaNavigli00.png", "demolizioneBarcaNavigli01.png", "demolizioneBarcaNavigli02.png", "demolizioneBarcaNavigli03.png"]
+      images: ["soppalcoCasaAcciaio.png", "riparazioneCancelli.jpg", "CostruzioneTelaioAcciaio.png", "costruzioneAtelierAcciaio.png", "FabbricazioneComponenteCustom.png", "grigliaPavimentoAcciaio.png", "procettoCnnr01.png", "demolizioneBarcaNavigli00.png", "demolizioneBarcaNavigli01.png", "demolizioneBarcaNavigli02.png", "demolizioneBarcaNavigli03.png"]
     },
     {
       title: "Riparazione Inferriate e Grate",
@@ -196,7 +190,7 @@ const Home = () => {
     {
       title: "Porte Blindate e Serrature",
       description: "Installazione porte blindate su misura. Cambio serrature immediato, conversione serratura doppia mappa a cilindro europeo.",
-      images: ["portaBlindata.webp"]
+      images: ["serramentaPortaCostruzione.png"]
     }
   ];
 
@@ -289,11 +283,51 @@ const Home = () => {
             </div>
 
             <div className="intro-image">
-              <img src={`${process.env.PUBLIC_URL}/images/logo2.png`} alt="Fabbro Milano Pronto Intervento Carratu'Aniello" />
+              <img src={`${process.env.PUBLIC_URL}/images/logoNuovo.png`} alt="Fabbro Milano Pronto Intervento Carratu'Aniello" />
               <div className="intro-badge">
                 <span className="years">40+</span>
                 <span className="text">Anni di<br />Esperienza</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Il Nostro Mastro Fabbro Nello Section */}
+      <section className="nello-section">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-subtitle">Il Nostro Esperto</span>
+            <h2 className="section-title">Mastro Fabbro Nello</h2>
+            <div className="section-divider"></div>
+            <p className="nello-intro">Anni di esperienza, dedizione e passione per l'artigianato del ferro.</p>
+          </div>
+
+          <div className="nello-carousel-container">
+            <div className="nello-carousel-track" style={{ transform: `translateX(-${activeNelloSlide * 100}%)` }}>
+              {nelloImages.map((img, idx) => (
+                <div className="nello-slide" key={idx}>
+                  <img src={`${process.env.PUBLIC_URL}/images/${img}`} alt={`Nello al lavoro ${idx + 1}`} />
+                </div>
+              ))}
+            </div>
+            
+            <div className="nello-carousel-controls">
+              <button className="carousel-arrow prev" onClick={() => setActiveNelloSlide((prev) => (prev - 1 + nelloImages.length) % nelloImages.length)}>
+                <i className="fas fa-chevron-left"></i>
+              </button>
+              <div className="carousel-dots">
+                {nelloImages.map((_, dotIndex) => (
+                  <button
+                    key={dotIndex}
+                    className={`carousel-dot ${activeNelloSlide === dotIndex ? 'active' : ''}`}
+                    onClick={() => setActiveNelloSlide(dotIndex)}
+                    aria-label={`Slide ${dotIndex + 1}`}
+                  ></button>
+                ))}
+              </div>
+              <button className="carousel-arrow next" onClick={() => setActiveNelloSlide((prev) => (prev + 1) % nelloImages.length)}>
+                <i className="fas fa-chevron-right"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -431,46 +465,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Il Nostro Mastro Fabbro Nello Section */}
-      <section className="nello-section">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-subtitle">Il Nostro Esperto</span>
-            <h2 className="section-title">Mastro Fabbro Nello</h2>
-            <div className="section-divider"></div>
-            <p className="nello-intro">Anni di esperienza, dedizione e passione per l'artigianato del ferro.</p>
-          </div>
-
-          <div className="nello-carousel-container">
-            <div className="nello-carousel-track" style={{ transform: `translateX(-${activeNelloSlide * 100}%)` }}>
-              {nelloImages.map((img, idx) => (
-                <div className="nello-slide" key={idx}>
-                  <img src={`${process.env.PUBLIC_URL}/images/${img}`} alt={`Nello al lavoro ${idx + 1}`} />
-                </div>
-              ))}
-            </div>
-            
-            <div className="nello-carousel-controls">
-              <button className="carousel-arrow prev" onClick={() => setActiveNelloSlide((prev) => (prev - 1 + nelloImages.length) % nelloImages.length)}>
-                <i className="fas fa-chevron-left"></i>
-              </button>
-              <div className="carousel-dots">
-                {nelloImages.map((_, dotIndex) => (
-                  <button
-                    key={dotIndex}
-                    className={`carousel-dot ${activeNelloSlide === dotIndex ? 'active' : ''}`}
-                    onClick={() => setActiveNelloSlide(dotIndex)}
-                    aria-label={`Slide ${dotIndex + 1}`}
-                  ></button>
-                ))}
-              </div>
-              <button className="carousel-arrow next" onClick={() => setActiveNelloSlide((prev) => (prev + 1) % nelloImages.length)}>
-                <i className="fas fa-chevron-right"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Progetto in Evidenza: CNR Bologna */}
       <section className="featured-project-section">
@@ -609,29 +603,6 @@ const Home = () => {
         </div>
       </section>
 
-
-
-      {/* Quick Contact Floating Button */}
-      <div className={`floating-contact ${isContactOpen ? 'active' : ''}`}>
-        <div className="contact-bubble whatsapp">
-          <a href="https://wa.me/393923842491" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-            <i className="fab fa-whatsapp"></i>
-          </a>
-        </div>
-        <div className="contact-bubble phone">
-          <a href="tel:+393923842491" aria-label="Chiama">
-            <i className="fas fa-phone-alt"></i>
-          </a>
-        </div>
-        <div className="contact-bubble email">
-          <a href="mailto:info@ferramentaabc.it" aria-label="Email">
-            <i className="fas fa-envelope"></i>
-          </a>
-        </div>
-        <button className={`contact-toggle ${isContactOpen ? 'active' : ''}`} onClick={toggleContactMenu} aria-expanded={isContactOpen} aria-label="Apri menu contatti rapidi">
-          <i className={`fas ${isContactOpen ? 'fa-times' : 'fa-plus'}`}></i>
-        </button>
-      </div>
 
       {/* Back to top button */}
       {isBackToTopVisible && (
