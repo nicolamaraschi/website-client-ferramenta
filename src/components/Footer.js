@@ -8,11 +8,15 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-brand">
             <div className="footer-logo">
-              <span className="logo-text">Carratu'</span>
-              <span className="logo-accent">Aniello</span>
+              <span className="logo-text">FabbroMilano</span>
+              <span className="logo-accent">H24</span>
             </div>
-            <p className="brand-description">
-              Servizi professionali di serrature e chiavi con oltre 40 anni di esperienza.
+            <p className="brand-description" style={{ marginBottom: '10px' }}>
+              di Carratu' Aniello
+            </p>
+            <p className="brand-description" style={{ fontSize: '0.9rem' }}>
+              Via Vergato 11<br />
+              20161 Milano MI
             </p>
           </div>
 
@@ -22,6 +26,7 @@ const Footer = () => {
               <ul className="footer-links">
                 <li><a href="/main">Home</a></li>
                 <li><a href="/servizi">Servizi</a></li>
+                <li><a href="/lavori">Lavori</a></li>
                 <li><a href="/contatti">Contatti</a></li>
                 <li><a href="/preventivo">Preventivo</a></li>
               </ul>
@@ -49,11 +54,12 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p className="copyright">
-            &copy; 2024 Carratu' Aniello. Tutti i diritti riservati.
+            &copy; {new Date().getFullYear()} FabbroMilanoH24 di Carratu' Aniello. Tutti i diritti riservati.
           </p>
           <div className="footer-divider"></div>
-          <p className="legal-info">
-            P.IVA: 13543820966 | C.F.: CRRNLL65B18T138V
+          <p className="legal-info" style={{ lineHeight: '1.8' }}>
+            P.IVA: 13543820966 | C.F.: CRRNLL65B18F138V<br />
+            Codice Univoco (SDI): X2PH38J
           </p>
         </div>
       </div>

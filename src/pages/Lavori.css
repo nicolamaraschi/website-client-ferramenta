@@ -1,0 +1,5 @@
+/* Lavori Page Specific CSS - Reuses Home.css styles but adds padding */
+.lavori-page {
+  min-height: 100vh;
+  background-color: var(--light-color);
+}

@@ -516,7 +516,8 @@
   font-family: 'Playfair Display', serif;
   font-size: 3.5rem;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.05);
+  color: var(--primary-gold);
+  opacity: 0.4;
   display: block;
   line-height: 1;
   margin-bottom: 10px;
@@ -679,10 +680,175 @@
   margin-right: 8px;
 }
 
+/* Nello Section */
+.nello-section {
+  padding: 100px 0;
+  background-color: var(--light-color);
+}
+
+.nello-intro {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin-top: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nello-carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 16/9;
+}
+
+.nello-carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nello-slide {
+  min-width: 100%;
+  height: 100%;
+}
+
+.nello-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nello-carousel-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Featured Project Section */
+.featured-project-section {
+  padding: 100px 0;
+  background-color: var(--light-color);
+}
+
+.featured-project-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.featured-project-content p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.featured-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.featured-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.featured-features i {
+  color: var(--primary-color);
+  margin-right: 15px;
+  font-size: 1.1rem;
+}
+
+.featured-project-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.featured-img-main {
+  width: 100%;
+  height: 350px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.featured-img-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.featured-img-main:hover img {
+  transform: scale(1.05);
+}
+
+.featured-img-sub {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.featured-img-sub img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.featured-img-sub img:hover {
+  transform: scale(1.05);
+}
+
 /* Portfolio Section */
 .portfolio-section {
   padding: 100px 0;
   background-color: white;
+}
+
+.portfolio-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: white;
 }
 
 .portfolio-gallery {
@@ -1487,5 +1653,53 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Mobile Fixes for Featured Projects */
+@media (max-width: 992px) {
+  .featured-project-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .featured-img-main {
+    height: 250px;
+  }
+  
+  .featured-img-sub img {
+    height: 150px;
+  }
+}
+
+/* Mobile Fixes for Portfolio Filters */
+@media (max-width: 768px) {
+  .portfolio-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 15px;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    /* Add negative margin to allow full edge-to-edge scrolling but keep padding */
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .filter-btn {
+    white-space: nowrap;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+  
+  /* Hide scrollbar completely for a native app feel */
+  .portfolio-filters::-webkit-scrollbar {
+    display: none;
+  }
+  .portfolio-filters {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
 }

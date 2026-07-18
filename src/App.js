@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Contatti from './pages/Contatti';
 import Preventivo from './pages/Preventivo';
 import Servizi from './pages/Servizi';
+import Lavori from './pages/Lavori';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importa Bootstrap
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           {/* Reindirizza da '/' a '/main' */}
           <Route path="/" element={<Navigate to="/main" />} />
           <Route path="/main" element={<Home />} />
+          <Route path="/lavori" element={<Lavori />} />
           <Route path="/contatti" element={<Contatti />} />
           <Route path="/preventivo" element={<Preventivo />} />
           <Route path="/servizi" element={<Servizi />} />

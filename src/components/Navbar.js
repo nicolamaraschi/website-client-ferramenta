@@ -35,9 +35,16 @@ const Navbar = () => {
   return (
     <nav className={`navbar-luxury ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="navbar-container">
-        <Link to="/main" className="navbar-logo">
-          <span className="logo-text">Carratu'</span>
-          <span className="logo-accent">Aniello</span>
+        <Link to="/main" className="navbar-logo" style={{ textDecoration: 'none' }}>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div>
+              <span className="logo-text" style={{ fontSize: '1.5rem' }}>FabbroMilano</span>
+              <span className="logo-accent" style={{ fontSize: '1.5rem' }}>H24</span>
+            </div>
+            <span style={{ fontSize: '0.65rem', fontWeight: '600', color: '#666', letterSpacing: '0.5px', marginTop: '-2px', textTransform: 'uppercase' }}>
+              di Carratu' Aniello
+            </span>
+          </div>
         </Link>
 
         <div className="navbar-menu-toggle" onClick={toggleMenu}>
@@ -58,6 +65,11 @@ const Navbar = () => {
             <li className="navbar-item">
               <Link to="/servizi" className={location.pathname === '/servizi' ? 'navbar-link active' : 'navbar-link'}>
                 Servizi
+              </Link>
+            </li>
+            <li className="navbar-item">
+              <Link to="/lavori" className={location.pathname === '/lavori' ? 'navbar-link active' : 'navbar-link'}>
+                Lavori
               </Link>
             </li>
             <li className="navbar-item">

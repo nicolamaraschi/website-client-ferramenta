@@ -15,6 +15,26 @@ const Home = () => {
     services: [0, 0, 0, 0, 0, 0]
   });
 
+  const [activeNelloSlide, setActiveNelloSlide] = useState(0);
+
+  const nelloImages = [
+    "nelloFoto1.png",
+    "nelloFoto2.png",
+    "nelloFoto3.png",
+    "nelloFoto4.png",
+    "nelloFoto5.png",
+    "fotoNelloCheLavora.png"
+  ];
+
+  const mainWorks = [
+    { category: "Strutture e Lavorazioni", title: "Soppalco in Acciaio", image: "soppalcoCasaAcciaio.png" },
+    { category: "Inferriate e Grate", title: "Inferriata Residenziale", image: "inferietaResidenziale.png" },
+    { category: "Infissi e Serramenti", title: "Serramento per Finestra", image: "serramentaFinestra.png" },
+    { category: "Cancelli e Recinzioni", title: "Cancello in Ferro", image: "Cancelli.jpeg" },
+    { category: "Serrature", title: "Porta Blindata", image: "portaBlindata.webp" },
+    { category: "Altro", title: "Serranda Motorizzata", image: "serranda.webp" }
+  ];
+
   // Schema Markup per Local Business / Fabbro
   const schemaMarkup = {
     "@context": "https://schema.org",
@@ -104,17 +124,25 @@ const Home = () => {
     const servicesInterval = setInterval(() => {
       setActiveSlide((prev) => ({
         ...prev,
-        services: prev.services.map((slide) => (slide + 1) % 3)
+        services: prev.services.map((slide, index) => {
+          const numImages = services[index].images.length;
+          return (slide + 1) % numImages;
+        })
       }));
     }, 5000);
+
+    const nelloInterval = setInterval(() => {
+      setActiveNelloSlide((prev) => (prev + 1) % nelloImages.length);
+    }, 4000);
 
     return () => {
       clearInterval(heroInterval);
       clearInterval(servicesInterval);
+      clearInterval(nelloInterval);
       observer.disconnect();
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [nelloImages.length]);
 
   const handleServiceSlideChange = (serviceIndex, slideIndex) => {
     setActiveSlide((prev) => {
@@ -143,32 +171,32 @@ const Home = () => {
     {
       title: "Pronto Intervento Apertura Porte",
       description: "Apertura porte bloccate senza scasso. Intervento rapido fabbro Milano centro e provincia.",
-      images: ["aperturaPorte.jpg", "aperturaPorte.jpg", "aperturaPorte.jpg"]
+      images: ["aperturaPorte.jpg"]
     },
     {
       title: "Zanzariere, Tapparelle e Infissi",
       description: "Installazione e riparazione di zanzariere, tapparelle, infissi e tende da esterni.",
-      images: ["sblocco.jpg", "sblocco.jpg", "sblocco.jpg"]
+      images: ["sblocco.jpg", "serramentaFinestra.png", "serramentaPorta.png", "serramentaPortaCostruzione.png"]
     },
     {
       title: "Basculanti e Saracinesche Motorizzate",
       description: "Assistenza tecnica per porte basculanti per box auto e saracinesche negozi motorizzate.",
-      images: ["serrande.jpg", "serrande.jpg", "serrande.jpg"]
+      images: ["serranda.webp", "tettoiaAlumminioPlexiglass.png", "RecizioneMetallicaVerde.png", "cencelloEsternoAcciaio.png", "Cancelli.jpeg"]
     },
     {
       title: "Demolizione e Soppalchi",
       description: "Demolizione e costruzione soppalchi su misura. Lavorazioni in ferro per ringhiere e balconi.",
-      images: ["riparazioneCancelli.jpg", "riparazioneCancelli.jpg", "riparazioneCancelli.jpg"]
+      images: ["soppalcoCasaAcciaio.png", "CostruzioneTelaioAcciaio.png", "costruzioneAtelierAcciaio.png", "FabbricazioneComponenteCustom.png", "grigliaPavimentoAcciaio.png", "procettoCnnr01.png", "riparazioneCancelli.jpg", "demolizioneBarcaNavigli00.png", "demolizioneBarcaNavigli01.png", "demolizioneBarcaNavigli02.png", "demolizioneBarcaNavigli03.png"]
     },
     {
       title: "Riparazione Inferriate e Grate",
       description: "Installazione e riparazione inferriate di sicurezza per finestre e balconi a Milano.",
-      images: ["inferiata.jpeg", "inferiata.jpeg", "inferiata.jpeg"]
+      images: ["inferietaResidenziale.png", "inferietaSuVetrata1.png", "inferietaSuVetrataPrimadellalavorazione.png", "inferietaportePerEsterno.png", "inferietaAcciatioFinestre.png", "inferietaFinestraAcciaio.png", "grateacciaoCostruzione01.png", "grateacciaoistallazione01.png", "inferiata.jpeg"]
     },
     {
       title: "Porte Blindate e Serrature",
       description: "Installazione porte blindate su misura. Cambio serrature immediato, conversione serratura doppia mappa a cilindro europeo.",
-      images: ["portaBlindata.webp", "portaBlindata.webp", "portaBlindata.webp"]
+      images: ["portaBlindata.webp"]
     }
   ];
 
@@ -403,93 +431,104 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Portfolio section */}
+      {/* Il Nostro Mastro Fabbro Nello Section */}
+      <section className="nello-section">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-subtitle">Il Nostro Esperto</span>
+            <h2 className="section-title">Mastro Fabbro Nello</h2>
+            <div className="section-divider"></div>
+            <p className="nello-intro">Anni di esperienza, dedizione e passione per l'artigianato del ferro.</p>
+          </div>
+
+          <div className="nello-carousel-container">
+            <div className="nello-carousel-track" style={{ transform: `translateX(-${activeNelloSlide * 100}%)` }}>
+              {nelloImages.map((img, idx) => (
+                <div className="nello-slide" key={idx}>
+                  <img src={`${process.env.PUBLIC_URL}/images/${img}`} alt={`Nello al lavoro ${idx + 1}`} />
+                </div>
+              ))}
+            </div>
+            
+            <div className="nello-carousel-controls">
+              <button className="carousel-arrow prev" onClick={() => setActiveNelloSlide((prev) => (prev - 1 + nelloImages.length) % nelloImages.length)}>
+                <i className="fas fa-chevron-left"></i>
+              </button>
+              <div className="carousel-dots">
+                {nelloImages.map((_, dotIndex) => (
+                  <button
+                    key={dotIndex}
+                    className={`carousel-dot ${activeNelloSlide === dotIndex ? 'active' : ''}`}
+                    onClick={() => setActiveNelloSlide(dotIndex)}
+                    aria-label={`Slide ${dotIndex + 1}`}
+                  ></button>
+                ))}
+              </div>
+              <button className="carousel-arrow next" onClick={() => setActiveNelloSlide((prev) => (prev + 1) % nelloImages.length)}>
+                <i className="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Progetto in Evidenza: CNR Bologna */}
+      <section className="featured-project-section">
+        <div className="container">
+          <div className="featured-project-wrapper">
+            <div className="featured-project-content">
+              <span className="section-subtitle">Progetto in Evidenza</span>
+              <h2 className="section-title">Lavori al CNR di Bologna</h2>
+              <div className="section-divider" style={{ margin: '0 0 20px 0' }}></div>
+              <p>Siamo orgogliosi di aver collaborato con il <strong>Consiglio Nazionale delle Ricerche (CNR) di Bologna</strong> per la realizzazione di strutture e componenti in acciaio su misura. Un progetto che testimonia la nostra capacità di soddisfare le esigenze di enti prestigiosi con la massima precisione e qualità sartoriale.</p>
+              <ul className="featured-features">
+                <li><i className="fas fa-check"></i> Progettazione su misura</li>
+                <li><i className="fas fa-check"></i> Lavorazioni di precisione</li>
+                <li><i className="fas fa-check"></i> Sicurezza e durabilità</li>
+              </ul>
+              <Link to="/preventivo" className="btn-primary mt-3">Richiedi un Progetto Simile</Link>
+            </div>
+            <div className="featured-project-gallery">
+              <div className="featured-img-main">
+                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr03.png`} alt="Progetto CNR Bologna 1" />
+              </div>
+              <div className="featured-img-sub">
+                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr01.png`} alt="Progetto CNR Bologna 2" />
+                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr02.png`} alt="Progetto CNR Bologna 3" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio section - Home Preview */}
       <section className="portfolio-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-subtitle">Galleria</span>
-            <h2 className="section-title">I Nostri Recenti Lavori</h2>
+            <span className="section-subtitle">Galleria Lavori</span>
+            <h2 className="section-title">Lavori in Evidenza</h2>
             <div className="section-divider"></div>
           </div>
 
           <div className="portfolio-gallery">
-            <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/riparazioneCancelli.jpg`} alt="Soppalchi e Demolizioni" />
-              <div className="gallery-overlay">
-                <div className="gallery-info">
-                  <h3>Soppalchi su Misura</h3>
-                  <p>Milano, 2023</p>
-                  <span className="gallery-icon">
-                    <i className="fas fa-plus"></i>
-                  </span>
+            {mainWorks.map((work, idx) => (
+              <div className="gallery-item" key={idx}>
+                <img src={`${process.env.PUBLIC_URL}/images/${work.image}`} alt={work.title} />
+                <div className="gallery-overlay">
+                  <div className="gallery-info">
+                    <h3>{work.title}</h3>
+                    <p>{work.category}</p>
+                    <span className="gallery-icon">
+                      <i className="fas fa-search-plus"></i>
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/portaBlindata.webp`} alt="Sostituzione Serrature" />
-              <div className="gallery-overlay">
-                <div className="gallery-info">
-                  <h3>Sostituzione Serrature</h3>
-                  <p>Milano, 2023</p>
-                  <span className="gallery-icon">
-                    <i className="fas fa-plus"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/aperturaPorte.jpg`} alt="Apertura Porta Senza Scasso" />
-              <div className="gallery-overlay">
-                <div className="gallery-info">
-                  <h3>Apertura Porte Bloccate</h3>
-                  <p>Milano, 2023</p>
-                  <span className="gallery-icon">
-                    <i className="fas fa-plus"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/sblocco.jpg`} alt="Zanzariere e Infissi" />
-              <div className="gallery-overlay">
-                <div className="gallery-info">
-                  <h3>Zanzariere e Infissi</h3>
-                  <p>Milano, 2023</p>
-                  <span className="gallery-icon">
-                    <i className="fas fa-plus"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/inferiata.jpeg`} alt="Riparazione Inferriate" />
-              <div className="gallery-overlay">
-                <div className="gallery-info">
-                  <h3>Riparazione Inferriate</h3>
-                  <p>Milano, 2022</p>
-                  <span className="gallery-icon">
-                    <i className="fas fa-plus"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="gallery-item">
-              <img src={`${process.env.PUBLIC_URL}/images/serranda.webp`} alt="Saracinesche Motorizzate" />
-              <div className="gallery-overlay">
-                <div className="gallery-info">
-                  <h3>Saracinesche Motorizzate</h3>
-                  <p>Milano, 2022</p>
-                  <span className="gallery-icon">
-                    <i className="fas fa-plus"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-5" style={{ marginTop: '40px' }}>
+            <Link to="/lavori" className="btn-outline">Vedi Tutti i Nostri Lavori</Link>
           </div>
         </div>
       </section>

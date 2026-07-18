@@ -30,7 +30,7 @@ const Servizi = () => {
     {
       title: "Demolizione e Soppalchi",
       description: "Demolizione e costruzione soppalchi su misura. Lavorazioni in ferro artigianali per ringhiere e balconi, unendo design e massima robustezza.",
-      image: "riparazioneCancelli.jpg",
+      image: "demolizioneBarcaNavigli00.png",
       icon: "fa-hammer"
     },
     {
