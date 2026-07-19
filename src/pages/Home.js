@@ -67,7 +67,18 @@ const Home = () => {
       "opens": "00:00",
       "closes": "23:59"
     },
-    "description": "Pronto intervento fabbro Milano 24h per apertura porte, cambio serrature, riparazione tapparelle e serrande."
+    "description": "Pronto intervento fabbro Milano 24h. Risoluzione emergenze in meno di 30 minuti. Apertura porte bloccate, cambio serrature, tapparelle e saracinesche.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Milano",
+      "addressRegion": "MI",
+      "addressCountry": "IT"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "125"
+    }
   };
 
   // Stato per il bottone "torna su"
@@ -175,7 +186,7 @@ const Home = () => {
     {
       title: "Basculanti e Saracinesche Motorizzate",
       description: "Assistenza tecnica per porte basculanti per box auto e saracinesche negozi motorizzate.",
-      images: ["serrande.jpg", "RecizioneMetallicaVerde.png", "Cancelli.jpeg"]
+      images: ["serrande.jpg", "Cancelli.jpeg"]
     },
     {
       title: "Demolizione e Soppalchi",
@@ -207,10 +218,10 @@ const Home = () => {
   return (
     <div className="home-page">
       <Helmet>
-        <title>Pronto Intervento Fabbro Milano 24h | Apertura Porte e Cambio Serrature</title>
-        <meta name="description" content="Cerchi un Fabbro a Milano? Pronto Intervento Fabbro 24h per apertura porte bloccate, cambio serrature, sblocco tapparelle e serrande." />
+        <title>Fabbro Milano Pronto Intervento 24h | Apertura Porte Urgente</title>
+        <meta name="description" content="Cerchi un fabbro urgente a Milano? Mastro Nello interviene in 30 min. Pronto Intervento 24h per apertura porte, serrature bloccate e tapparelle." />
         <link rel="canonical" href="https://nicolamaraschi.github.io/website-client-ferramenta" />
-        <meta name="keywords" content="fabbro milano, pronto intervento fabbro milano, apertura porte milano, cambio serratura milano, fabbro urgente" />
+        <meta name="keywords" content="fabbro milano, pronto intervento fabbro, fabbro urgente milano, apertura porte milano, cambio serratura, fabbro 24h milano, sos fabbro" />
       </Helmet>
 
       {/* JSON-LD Schema for SEO */}
@@ -283,7 +294,7 @@ const Home = () => {
             </div>
 
             <div className="intro-image">
-              <img src={`${process.env.PUBLIC_URL}/images/logoNuovo.png`} alt="Fabbro Milano Pronto Intervento Carratu'Aniello" />
+              <img src={`${process.env.PUBLIC_URL}/images/logoNuovo.png`} alt="Mastro Nello - Fabbro Milano Pronto Intervento 24h" />
               <div className="intro-badge">
                 <span className="years">30+</span>
                 <span className="text">Anni di<br />Esperienza</span>
@@ -352,7 +363,7 @@ const Home = () => {
                 <div className="service-image">
                   <img
                     src={`${process.env.PUBLIC_URL}/images/${service.images[0]}`}
-                    alt={service.title}
+                    alt={`Servizio Fabbro Milano: ${service.title}`}
                   />
                 </div>
                 <div className="service-content">
@@ -401,7 +412,7 @@ const Home = () => {
                     <div key={imgIndex} className="carousel-slide">
                       <img
                         src={`${process.env.PUBLIC_URL}/images/${image}`}
-                        alt={`${service.title} ${imgIndex + 1}`}
+                        alt={`Servizio Fabbro Milano: ${service.title} - ${imgIndex + 1}`}
                       />
                     </div>
                   ))}
@@ -484,11 +495,11 @@ const Home = () => {
             </div>
             <div className="featured-project-gallery">
               <div className="featured-img-main">
-                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr03.png`} alt="Progetto CNR Bologna 1" />
+                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr03.png`} alt="Realizzazione in acciaio per CNR Bologna - Progetto Fabbro Milano" />
               </div>
               <div className="featured-img-sub">
-                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr01.png`} alt="Progetto CNR Bologna 2" />
-                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr02.png`} alt="Progetto CNR Bologna 3" />
+                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr01.png`} alt="Dettaglio lavorazione ferro CNR Bologna" />
+                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr02.png`} alt="Installazione componenti in acciaio CNR" />
               </div>
             </div>
           </div>
@@ -507,7 +518,7 @@ const Home = () => {
           <div className="portfolio-gallery">
             {mainWorks.map((work, idx) => (
               <div className="gallery-item" key={idx}>
-                <img src={`${process.env.PUBLIC_URL}/images/${work.image}`} alt={work.title} />
+                <img src={`${process.env.PUBLIC_URL}/images/${work.image}`} alt={`Fabbro Milano - ${work.title} - ${work.category}`} loading="lazy" />
                 <div className="gallery-overlay">
                   <div className="gallery-info">
                     <h3>{work.title}</h3>

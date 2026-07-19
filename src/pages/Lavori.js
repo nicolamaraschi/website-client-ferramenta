@@ -47,8 +47,8 @@ const Lavori = () => {
   return (
     <div className="lavori-page pt-20">
       <Helmet>
-        <title>I Nostri Lavori | Fabbro Milano Carratu' Aniello</title>
-        <meta name="description" content="Esplora la galleria dei nostri progetti: inferriate, soppalchi in acciaio, infissi, porte blindate e cancelli." />
+        <title>I Nostri Lavori | Fabbro Milano: Sicurezza e Affidabilità</title>
+        <meta name="description" content="Guarda i progetti e gli interventi realizzati da Mastro Nello a Milano. Dalle aperture porte d'emergenza alle lavorazioni in ferro su misura." />
       </Helmet>
 
       {/* Progetto in Evidenza: Navigli */}
