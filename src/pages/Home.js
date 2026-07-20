@@ -191,7 +191,7 @@ const Home = () => {
     {
       title: "Demolizione e Soppalchi",
       description: "Demolizione e costruzione soppalchi su misura. Lavorazioni in ferro per ringhiere e balconi.",
-      images: ["soppalcoCasaAcciaio.png"]
+      images: ["soppalcoCasaAcciaio.png", "demolizione.png"]
     },
     {
       title: "Riparazione Inferriate e Grate",
