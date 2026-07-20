@@ -26,7 +26,7 @@ const Servizi = () => {
     {
       title: "Demolizione e Soppalchi",
       description: "Demolizione e costruzione soppalchi su misura. Lavorazioni in ferro artigianali per ringhiere e balconi, unendo design e massima robustezza.",
-      image: "soppalcoCasaAcciaio.png",
+      image: "demolizione.png",
       icon: "fa-hammer"
     },
     {
@@ -40,6 +40,12 @@ const Servizi = () => {
       description: "Installazione porte blindate su misura. Cambio serrature immediato, aggiornamento e conversione da vecchia serratura a doppia mappa a cilindro europeo ad alta sicurezza.",
       image: "portaBlindata.png",
       icon: "fa-key"
+    },
+    {
+      title: "Scale fatte in Acciaio",
+      description: "Progettazione e realizzazione di scale in acciaio su misura, robuste e dal design moderno, ideali per interni ed esterni.",
+      image: "scaleMetallo.png",
+      icon: "fa-layer-group"
     }
   ];
 

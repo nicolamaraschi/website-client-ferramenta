@@ -12,7 +12,7 @@ const Home = () => {
   // Stato per tenere traccia del carosello attivo
   const [activeSlide, setActiveSlide] = useState({
     hero: 0,
-    services: [0, 0, 0, 0, 0, 0]
+    services: [0, 0, 0, 0, 0, 0, 0]
   });
 
   const [activeNelloSlide, setActiveNelloSlide] = useState(0);
@@ -31,8 +31,8 @@ const Home = () => {
     { category: "Inferriate e Grate", title: "Inferriata Residenziale", image: "inferietaResidenziale.png" },
     { category: "Infissi e Serramenti", title: "Serramento per Finestra", image: "serramentaFinestra.png" },
     { category: "Cancelli e Recinzioni", title: "Cancello in Ferro", image: "Cancelli.jpeg" },
-    { category: "Strutture e Lavorazioni", title: "Costruzione Scale", image: "costruzioneScale.png" },
-    { category: "Progetti Speciali", title: "Demolizione Navigli", image: "demolizioneBarcaNavigli00.png" }
+    { category: "Strutture e Lavorazioni", title: "Costruzione Scale", image: "scaleMetallo.png" },
+    { category: "Progetti Speciali", title: "Demolizione Navigli", image: "demolizione.png" }
   ];
 
   // Schema Markup per Local Business / Fabbro
@@ -202,6 +202,11 @@ const Home = () => {
       title: "Porte Blindate e Serrature",
       description: "Installazione porte blindate su misura. Cambio serrature immediato, conversione serratura doppia mappa a cilindro europeo.",
       images: ["portaBlindata.png"]
+    },
+    {
+      title: "Scale fatte in Acciaio",
+      description: "Progettazione e realizzazione di scale in acciaio su misura, robuste e dal design moderno.",
+      images: ["scaleMetallo.png", "scaleMetallo2.png", "scaleMetallo3.png"]
     }
   ];
 
