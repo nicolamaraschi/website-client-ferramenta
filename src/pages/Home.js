@@ -368,7 +368,7 @@ const Home = () => {
                 <div className="service-image">
                   <img
                     src={`${process.env.PUBLIC_URL}/images/${service.images[0]}`}
-                    alt={`Servizio Fabbro Milano: ${service.title}`}
+                    alt={`Servizio FabbroEmergenzaMilano.it: ${service.title}`}
                   />
                 </div>
                 <div className="service-content">
@@ -417,7 +417,7 @@ const Home = () => {
                     <div key={imgIndex} className="carousel-slide">
                       <img
                         src={`${process.env.PUBLIC_URL}/images/${image}`}
-                        alt={`Servizio Fabbro Milano: ${service.title} - ${imgIndex + 1}`}
+                        alt={`Servizio FabbroEmergenzaMilano.it: ${service.title} - ${imgIndex + 1}`}
                       />
                     </div>
                   ))}
@@ -500,7 +500,7 @@ const Home = () => {
             </div>
             <div className="featured-project-gallery">
               <div className="featured-img-main">
-                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr03.png`} alt="Realizzazione in acciaio per CNR Bologna - Progetto Fabbro Milano" />
+                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr03.png`} alt="Realizzazione in acciaio per CNR Bologna - Progetto FabbroEmergenzaMilano.it" />
               </div>
               <div className="featured-img-sub">
                 <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr01.png`} alt="Dettaglio lavorazione ferro CNR Bologna" />
@@ -523,7 +523,7 @@ const Home = () => {
           <div className="portfolio-gallery">
             {mainWorks.map((work, idx) => (
               <div className="gallery-item" key={idx}>
-                <img src={`${process.env.PUBLIC_URL}/images/${work.image}`} alt={`Fabbro Milano - ${work.title} - ${work.category}`} loading="lazy" />
+                <img src={`${process.env.PUBLIC_URL}/images/${work.image}`} alt={`FabbroEmergenzaMilano.it - ${work.title} - ${work.category}`} loading="lazy" />
                 <div className="gallery-overlay">
                   <div className="gallery-info">
                     <h3>{work.title}</h3>

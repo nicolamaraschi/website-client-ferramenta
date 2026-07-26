@@ -53,7 +53,7 @@ const Servizi = () => {
     <div className="servizi-page">
       <Helmet>
         <title>Servizi FabbroEmergenzaMilano.it | Apertura Porte, Serrature, Serrande e Soppalchi</title>
-        <meta name="description" content="Scopri tutti i servizi di Pronto Intervento Fabbro Milano. Apertura porte senza scasso, riparazione tapparelle, installazione porte blindate e grate di sicurezza." />
+        <meta name="description" content="Scopri tutti i servizi di Pronto Intervento FabbroEmergenzaMilano.it. Apertura porte senza scasso, riparazione tapparelle, installazione porte blindate e grate di sicurezza." />
       </Helmet>
 
       {/* Hero Section */}
