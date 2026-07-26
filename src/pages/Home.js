@@ -598,7 +598,7 @@ const Home = () => {
                       </div>
                       <div className="detail-content">
                         <h3>Email</h3>
-                        <p>info@carratuaniello.it<br />supporto@carratuaniello.it</p>
+                        <p>info@carratuaniello.it<br />supporto@ferramentaabc.it</p>
                       </div>
                     </div>
 

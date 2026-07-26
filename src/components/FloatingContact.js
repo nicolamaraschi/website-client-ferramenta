@@ -15,7 +15,7 @@ const FloatingContact = () => {
         </a>
       </div>
       <div className="contact-bubble email">
-        <a href="mailto:info@ferramentaabc.it" aria-label="Email">
+        <a href="mailto:info@carratuaniello.it" aria-label="Email">
           <i className="fas fa-envelope"></i>
         </a>
       </div>
