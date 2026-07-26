@@ -21,7 +21,7 @@ const Contatti = () => {
       <section className="contatti-hero">
         <div 
           className="contatti-hero-bg" 
-          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/consulenza.jpeg)` }}
+          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/consulenza.webp)` }}
         ></div>
         <div className="contatti-hero-content">
           <h1>Contatti</h1>

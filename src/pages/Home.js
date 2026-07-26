@@ -18,21 +18,21 @@ const Home = () => {
   const [activeNelloSlide, setActiveNelloSlide] = useState(0);
 
   const nelloImages = [
-    "nelloFoto1.png",
-    "nelloFoto2.png",
-    "nelloFoto3.png",
-    "nelloFoto4.png",
-    "nelloFoto5.png",
-    "fotoNelloCheLavora.png"
+    "nelloFoto1.webp",
+    "nelloFoto2.webp",
+    "nelloFoto3.webp",
+    "nelloFoto4.webp",
+    "nelloFoto5.webp",
+    "fotoNelloCheLavora.webp"
   ];
 
   const mainWorks = [
-    { category: "Strutture e Lavorazioni", title: "Soppalco in Acciaio", image: "soppalcoCasaAcciaio.png" },
-    { category: "Inferriate e Grate", title: "Inferriata Residenziale", image: "inferietaResidenziale.png" },
-    { category: "Infissi e Serramenti", title: "Serramento per Finestra", image: "serramentaFinestra.png" },
-    { category: "Cancelli e Recinzioni", title: "Cancello in Ferro", image: "Cancelli.jpeg" },
-    { category: "Strutture e Lavorazioni", title: "Costruzione Scale", image: "scaleMetallo.png" },
-    { category: "Progetti Speciali", title: "Demolizione Navigli", image: "demolizione.png" }
+    { category: "Strutture e Lavorazioni", title: "Soppalco in Acciaio", image: "soppalcoCasaAcciaio.webp" },
+    { category: "Inferriate e Grate", title: "Inferriata Residenziale", image: "inferietaResidenziale.webp" },
+    { category: "Infissi e Serramenti", title: "Serramento per Finestra", image: "serramentaFinestra.webp" },
+    { category: "Cancelli e Recinzioni", title: "Cancello in Ferro", image: "Cancelli.webp" },
+    { category: "Strutture e Lavorazioni", title: "Costruzione Scale", image: "scaleMetallo.webp" },
+    { category: "Progetti Speciali", title: "Demolizione Navigli", image: "demolizione.webp" }
   ];
 
   // Schema Markup per Local Business / Fabbro
@@ -176,37 +176,37 @@ const Home = () => {
     {
       title: "Pronto Intervento Apertura Porte",
       description: "Apertura porte bloccate senza scasso. Intervento rapido fabbro Milano centro e provincia.",
-      images: ["portaEmergenza.jpg"]
+      images: ["portaEmergenza.webp"]
     },
     {
       title: "Zanzariere, Tapparelle e Infissi",
       description: "Installazione e riparazione di zanzariere, tapparelle, infissi e tende da esterni.",
-      images: ["serramentaFinestra.png", "serramentaPorta.png", "serramentaPortaCostruzione.png"]
+      images: ["serramentaFinestra.webp", "serramentaPorta.webp", "serramentaPortaCostruzione.webp"]
     },
     {
       title: "Basculanti e Saracinesche Motorizzate",
       description: "Assistenza tecnica per porte basculanti per box auto e saracinesche negozi motorizzate.",
-      images: ["serrande.jpg", "Cancelli.jpeg"]
+      images: ["serrande.webp", "Cancelli.webp"]
     },
     {
       title: "Demolizione e Soppalchi",
       description: "Demolizione e costruzione soppalchi su misura. Lavorazioni in ferro per ringhiere e balconi.",
-      images: ["soppalcoCasaAcciaio.png", "demolizione.png"]
+      images: ["soppalcoCasaAcciaio.webp", "demolizione.webp"]
     },
     {
       title: "Riparazione Inferriate e Grate",
       description: "Installazione e riparazione inferriate di sicurezza per finestre e balconi a Milano.",
-      images: ["inferietaResidenziale.png", "inferietaSuVetrata1.png", "inferietaSuVetrataPrimadellalavorazione.png", "inferietaportePerEsterno.png", "inferietaAcciatioFinestre.png", "inferietaFinestraAcciaio.png", "grateacciaoCostruzione01.png", "grateacciaoistallazione01.png", "inferiata.jpeg"]
+      images: ["inferietaResidenziale.webp", "inferietaSuVetrata1.webp", "inferietaSuVetrataPrimadellalavorazione.webp", "inferietaportePerEsterno.webp", "inferietaAcciatioFinestre.webp", "inferietaFinestraAcciaio.webp", "grateacciaoCostruzione01.webp", "grateacciaoistallazione01.webp", "inferiata.webp"]
     },
     {
       title: "Porte Blindate e Serrature",
       description: "Installazione porte blindate su misura. Cambio serrature immediato, conversione serratura doppia mappa a cilindro europeo.",
-      images: ["portaBlindata.png"]
+      images: ["portaBlindata.webp"]
     },
     {
       title: "Scale fatte in Acciaio",
       description: "Progettazione e realizzazione di scale in acciaio su misura, robuste e dal design moderno.",
-      images: ["scaleMetallo.png", "scaleMetallo2.png", "scaleMetallo3.png"]
+      images: ["scaleMetallo.webp", "scaleMetallo2.webp", "scaleMetallo3.webp"]
     }
   ];
 
@@ -500,11 +500,11 @@ const Home = () => {
             </div>
             <div className="featured-project-gallery">
               <div className="featured-img-main">
-                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr03.png`} alt="Realizzazione in acciaio per CNR Bologna - Progetto FabbroEmergenzaMilano.it" />
+                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr03.webp`} alt="Realizzazione in acciaio per CNR Bologna - Progetto FabbroEmergenzaMilano.it" />
               </div>
               <div className="featured-img-sub">
-                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr01.png`} alt="Dettaglio lavorazione ferro CNR Bologna" />
-                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr02.png`} alt="Installazione componenti in acciaio CNR" />
+                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr01.webp`} alt="Dettaglio lavorazione ferro CNR Bologna" />
+                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr02.webp`} alt="Installazione componenti in acciaio CNR" />
               </div>
             </div>
           </div>

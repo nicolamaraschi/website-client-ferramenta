@@ -6,40 +6,40 @@ const Lavori = () => {
   const [activeCategory, setActiveCategory] = useState("Tutti");
 
   const portfolioWorks = [
-    { category: "Inferriate e Grate", title: "Inferriata Residenziale", image: "inferietaResidenziale.png" },
-    { category: "Inferriate e Grate", title: "Inferriata su Vetrata", image: "inferietaSuVetrata1.png" },
-    { category: "Inferriate e Grate", title: "Lavorazione Inferriata", image: "inferietaSuVetrataPrimadellalavorazione.png" },
-    { category: "Inferriate e Grate", title: "Inferriata per Esterni", image: "inferietaportePerEsterno.png" },
-    { category: "Inferriate e Grate", title: "Inferriata in Acciaio", image: "inferietaAcciatioFinestre.png" },
-    { category: "Inferriate e Grate", title: "Inferriata per Finestra", image: "inferietaFinestraAcciaio.png" },
-    { category: "Inferriate e Grate", title: "Costruzione Grata", image: "grateacciaoCostruzione01.png" },
-    { category: "Inferriate e Grate", title: "Installazione Grata", image: "grateacciaoistallazione01.png" },
-    { category: "Inferriate e Grate", title: "Riparazione Inferriata", image: "inferiata.jpeg" },
-    { category: "Strutture e Lavorazioni", title: "Scale in Metallo", image: "scaleMetallo.png" },
-    { category: "Strutture e Lavorazioni", title: "Lavorazione Scale in Acciaio", image: "scaleMetallo2.png" },
-    { category: "Strutture e Lavorazioni", title: "Dettaglio Scale in Ferro", image: "scaleMetallo3.png" },
-    { category: "Strutture e Lavorazioni", title: "Soppalco in Acciaio", image: "soppalcoCasaAcciaio.png" },
-    { category: "Strutture e Lavorazioni", title: "Costruzione Telaio", image: "CostruzioneTelaioAcciaio.png" },
-    { category: "Strutture e Lavorazioni", title: "Costruzione Atelier", image: "costruzioneAtelierAcciaio.png" },
-    { category: "Strutture e Lavorazioni", title: "Componente Custom", image: "FabbricazioneComponenteCustom.png" },
-    { category: "Strutture e Lavorazioni", title: "Porta Bici in Acciaio", image: "portaBiciAcciaio.png" },
-    { category: "Strutture e Lavorazioni", title: "Griglia a Pavimento", image: "grigliaPavimentoAcciaio.png" },
-    { category: "Infissi e Serramenti", title: "Serramento per Finestra", image: "serramentaFinestra.png" },
-    { category: "Infissi e Serramenti", title: "Serramento per Porta", image: "serramentaPorta.png" },
-    { category: "Infissi e Serramenti", title: "Costruzione Serramento", image: "serramentaPortaCostruzione.png" },
-    { category: "Infissi e Serramenti", title: "Zanzariere e Tapparelle", image: "sblocco.jpg" },
-    { category: "Progetti Speciali", title: "Progetto Speciale CNR 1", image: "procettoCnnr01.png" },
-    { category: "Progetti Speciali", title: "Progetto Speciale CNR 2", image: "procettoCnnr02.png" },
-    { category: "Progetti Speciali", title: "Progetto Speciale CNR 3", image: "procettoCnnr03.png" },
-    { category: "Progetti Speciali", title: "Demolizione", image: "demolizione.png" },
-    { category: "Progetti Speciali", title: "Demolizione Barcone Navigli 1", image: "demolizioneBarcaNavigli00.png" },
-    { category: "Progetti Speciali", title: "Demolizione Barcone Navigli 2", image: "demolizioneBarcaNavigli01.png" },
-    { category: "Progetti Speciali", title: "Demolizione Barcone Navigli 3", image: "demolizioneBarcaNavigli02.png" },
-    { category: "Progetti Speciali", title: "Demolizione Barcone Navigli 4", image: "demolizioneBarcaNavigli03.png" },
-    { category: "Cancelli e Recinzioni", title: "Recinzione Verde", image: "RecizioneMetallicaVerde.png" },
-    { category: "Cancelli e Recinzioni", title: "Cancello in Ferro", image: "Cancelli.jpeg" },
-    { category: "Cancelli e Recinzioni", title: "Riparazione Cancelli", image: "riparazioneCancelli.jpg" },
-    { category: "Altro", title: "Tettoia", image: "tettoiaAlumminioPlexiglass.png" },
+    { category: "Inferriate e Grate", title: "Inferriata Residenziale", image: "inferietaResidenziale.webp" },
+    { category: "Inferriate e Grate", title: "Inferriata su Vetrata", image: "inferietaSuVetrata1.webp" },
+    { category: "Inferriate e Grate", title: "Lavorazione Inferriata", image: "inferietaSuVetrataPrimadellalavorazione.webp" },
+    { category: "Inferriate e Grate", title: "Inferriata per Esterni", image: "inferietaportePerEsterno.webp" },
+    { category: "Inferriate e Grate", title: "Inferriata in Acciaio", image: "inferietaAcciatioFinestre.webp" },
+    { category: "Inferriate e Grate", title: "Inferriata per Finestra", image: "inferietaFinestraAcciaio.webp" },
+    { category: "Inferriate e Grate", title: "Costruzione Grata", image: "grateacciaoCostruzione01.webp" },
+    { category: "Inferriate e Grate", title: "Installazione Grata", image: "grateacciaoistallazione01.webp" },
+    { category: "Inferriate e Grate", title: "Riparazione Inferriata", image: "inferiata.webp" },
+    { category: "Strutture e Lavorazioni", title: "Scale in Metallo", image: "scaleMetallo.webp" },
+    { category: "Strutture e Lavorazioni", title: "Lavorazione Scale in Acciaio", image: "scaleMetallo2.webp" },
+    { category: "Strutture e Lavorazioni", title: "Dettaglio Scale in Ferro", image: "scaleMetallo3.webp" },
+    { category: "Strutture e Lavorazioni", title: "Soppalco in Acciaio", image: "soppalcoCasaAcciaio.webp" },
+    { category: "Strutture e Lavorazioni", title: "Costruzione Telaio", image: "CostruzioneTelaioAcciaio.webp" },
+    { category: "Strutture e Lavorazioni", title: "Costruzione Atelier", image: "costruzioneAtelierAcciaio.webp" },
+    { category: "Strutture e Lavorazioni", title: "Componente Custom", image: "FabbricazioneComponenteCustom.webp" },
+    { category: "Strutture e Lavorazioni", title: "Porta Bici in Acciaio", image: "portaBiciAcciaio.webp" },
+    { category: "Strutture e Lavorazioni", title: "Griglia a Pavimento", image: "grigliaPavimentoAcciaio.webp" },
+    { category: "Infissi e Serramenti", title: "Serramento per Finestra", image: "serramentaFinestra.webp" },
+    { category: "Infissi e Serramenti", title: "Serramento per Porta", image: "serramentaPorta.webp" },
+    { category: "Infissi e Serramenti", title: "Costruzione Serramento", image: "serramentaPortaCostruzione.webp" },
+    { category: "Infissi e Serramenti", title: "Zanzariere e Tapparelle", image: "sblocco.webp" },
+    { category: "Progetti Speciali", title: "Progetto Speciale CNR 1", image: "procettoCnnr01.webp" },
+    { category: "Progetti Speciali", title: "Progetto Speciale CNR 2", image: "procettoCnnr02.webp" },
+    { category: "Progetti Speciali", title: "Progetto Speciale CNR 3", image: "procettoCnnr03.webp" },
+    { category: "Progetti Speciali", title: "Demolizione", image: "demolizione.webp" },
+    { category: "Progetti Speciali", title: "Demolizione Barcone Navigli 1", image: "demolizioneBarcaNavigli00.webp" },
+    { category: "Progetti Speciali", title: "Demolizione Barcone Navigli 2", image: "demolizioneBarcaNavigli01.webp" },
+    { category: "Progetti Speciali", title: "Demolizione Barcone Navigli 3", image: "demolizioneBarcaNavigli02.webp" },
+    { category: "Progetti Speciali", title: "Demolizione Barcone Navigli 4", image: "demolizioneBarcaNavigli03.webp" },
+    { category: "Cancelli e Recinzioni", title: "Recinzione Verde", image: "RecizioneMetallicaVerde.webp" },
+    { category: "Cancelli e Recinzioni", title: "Cancello in Ferro", image: "Cancelli.webp" },
+    { category: "Cancelli e Recinzioni", title: "Riparazione Cancelli", image: "riparazioneCancelli.webp" },
+    { category: "Altro", title: "Tettoia", image: "tettoiaAlumminioPlexiglass.webp" },
   ];
 
   const categories = ["Tutti", ...new Set(portfolioWorks.map(w => w.category))];
@@ -61,11 +61,11 @@ const Lavori = () => {
           <div className="featured-project-wrapper">
             <div className="featured-project-gallery">
               <div className="featured-img-main">
-                <img src={`${process.env.PUBLIC_URL}/images/demolizioneBarcaNavigli00.png`} alt="Demolizione Barcone Navigli Pavese" />
+                <img src={`${process.env.PUBLIC_URL}/images/demolizioneBarcaNavigli00.webp`} alt="Demolizione Barcone Navigli Pavese" />
               </div>
               <div className="featured-img-sub">
-                <img src={`${process.env.PUBLIC_URL}/images/demolizioneBarcaNavigli01.png`} alt="Barcone Navigli 1" />
-                <img src={`${process.env.PUBLIC_URL}/images/demolizioneBarcaNavigli03.png`} alt="Barcone Navigli 3" />
+                <img src={`${process.env.PUBLIC_URL}/images/demolizioneBarcaNavigli01.webp`} alt="Barcone Navigli 1" />
+                <img src={`${process.env.PUBLIC_URL}/images/demolizioneBarcaNavigli03.webp`} alt="Barcone Navigli 3" />
               </div>
             </div>
             <div className="featured-project-content" style={{ paddingLeft: '20px' }}>
@@ -102,11 +102,11 @@ const Lavori = () => {
             </div>
             <div className="featured-project-gallery">
               <div className="featured-img-main">
-                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr03.png`} alt="Progetto CNR Bologna 1" />
+                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr03.webp`} alt="Progetto CNR Bologna 1" />
               </div>
               <div className="featured-img-sub">
-                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr01.png`} alt="Progetto CNR Bologna 2" />
-                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr02.png`} alt="Progetto CNR Bologna 3" />
+                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr01.webp`} alt="Progetto CNR Bologna 2" />
+                <img src={`${process.env.PUBLIC_URL}/images/procettoCnnr02.webp`} alt="Progetto CNR Bologna 3" />
               </div>
             </div>
           </div>

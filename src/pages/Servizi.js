@@ -8,43 +8,43 @@ const Servizi = () => {
     {
       title: "Pronto Intervento Apertura Porte",
       description: "Apertura porte bloccate senza scasso. Intervento rapido fabbro Milano centro e provincia. Tecniche avanzate per non danneggiare infissi e serrature.",
-      image: "portaEmergenza.jpg",
+      image: "portaEmergenza.webp",
       icon: "fa-door-open"
     },
     {
       title: "Zanzariere, Tapparelle e Infissi",
       description: "Installazione e riparazione di zanzariere, tapparelle, infissi e tende da esterni. Sostituzione cinghie e motorizzazione tapparelle per la tua comodità.",
-      image: "serramentaFinestra.png",
+      image: "serramentaFinestra.webp",
       icon: "fa-window-maximize"
     },
     {
       title: "Basculanti e Saracinesche Motorizzate",
       description: "Assistenza tecnica per porte basculanti per box auto e saracinesche negozi motorizzate. Riparazioni urgenti per non bloccare mai la tua attività.",
-      image: "serrande.jpg",
+      image: "serrande.webp",
       icon: "fa-warehouse"
     },
     {
       title: "Demolizione e Soppalchi",
       description: "Demolizione e costruzione soppalchi su misura. Lavorazioni in ferro artigianali per ringhiere e balconi, unendo design e massima robustezza.",
-      image: "demolizione.png",
+      image: "demolizione.webp",
       icon: "fa-hammer"
     },
     {
       title: "Riparazione Inferriate e Grate",
       description: "Installazione e riparazione inferriate di sicurezza per finestre e balconi a Milano. Metti in sicurezza la tua casa con prodotti certificati antieffrazione.",
-      image: "inferietaResidenziale.png",
+      image: "inferietaResidenziale.webp",
       icon: "fa-shield-alt"
     },
     {
       title: "Porte Blindate e Serrature",
       description: "Installazione porte blindate su misura. Cambio serrature immediato, aggiornamento e conversione da vecchia serratura a doppia mappa a cilindro europeo ad alta sicurezza.",
-      image: "portaBlindata.png",
+      image: "portaBlindata.webp",
       icon: "fa-key"
     },
     {
       title: "Scale fatte in Acciaio",
       description: "Progettazione e realizzazione di scale in acciaio su misura, robuste e dal design moderno, ideali per interni ed esterni.",
-      image: "scaleMetallo.png",
+      image: "scaleMetallo.webp",
       icon: "fa-layer-group"
     }
   ];
