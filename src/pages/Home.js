@@ -213,7 +213,7 @@ const Home = () => {
   const stats = [
     { count: 100, label: "Lavori Completati" },
     { count: 50, label: "Clienti Soddisfatti" },
-    { count: 30, label: "Anni di Esperienza" }
+    { count: 40, label: "Anni di Esperienza" }
   ];
 
 
@@ -301,7 +301,7 @@ const Home = () => {
             <div className="intro-image">
               <img src={`${process.env.PUBLIC_URL}/images/logoNuovo.png`} alt="Mastro Nello - FabbroEmergenzaMilano.it Pronto Intervento 24h" />
               <div className="intro-badge">
-                <span className="years">30+</span>
+                <span className="years">40+</span>
                 <span className="text">Anni di<br />Esperienza</span>
               </div>
             </div>
@@ -315,7 +315,7 @@ const Home = () => {
             <span className="section-subtitle">Il Nostro Esperto</span>
             <h2 className="section-title">Mastro Fabbro Nello</h2>
             <div className="section-divider"></div>
-            <p className="nello-intro">Più di 30 anni di esperienza, dedizione e passione per l'artigianato del ferro.</p>
+            <p className="nello-intro">Più di 40 anni di esperienza, dedizione e passione per l'artigianato del ferro.</p>
           </div>
 
           <div className="nello-carousel-container">
