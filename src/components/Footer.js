@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-brand">
             <div className="footer-logo">
-              <span className="logo-text">FabbroMilano</span>
+              <span className="logo-text">FabbroEmergenzaMilano.it</span>
               <span className="logo-accent">H24</span>
             </div>
             <p className="brand-description" style={{ marginBottom: '10px' }}>
@@ -54,7 +54,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p className="copyright">
-            &copy; {new Date().getFullYear()} FabbroMilanoH24 di Carratu' Aniello. Tutti i diritti riservati.
+            &copy; {new Date().getFullYear()} fabbroemergenzamilano.it di Carratu' Aniello. Tutti i diritti riservati.
           </p>
           <div className="footer-divider"></div>
           <p className="legal-info" style={{ lineHeight: '1.8' }}>

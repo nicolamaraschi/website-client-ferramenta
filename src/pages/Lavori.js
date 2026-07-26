@@ -51,7 +51,7 @@ const Lavori = () => {
   return (
     <div className="lavori-page pt-20">
       <Helmet>
-        <title>I Nostri Lavori | Fabbro Milano: Sicurezza e Affidabilità</title>
+        <title>I Nostri Lavori | FabbroEmergenzaMilano.it: Sicurezza e Affidabilità</title>
         <meta name="description" content="Guarda i progetti e gli interventi realizzati da Mastro Nello a Milano. Dalle aperture porte d'emergenza alle lavorazioni in ferro su misura." />
       </Helmet>
 

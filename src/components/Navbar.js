@@ -38,7 +38,7 @@ const Navbar = () => {
         <Link to="/main" className="navbar-logo" style={{ textDecoration: 'none' }}>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div>
-              <span className="logo-text" style={{ fontSize: '1.5rem' }}>FabbroMilano</span>
+              <span className="logo-text" style={{ fontSize: '1.5rem' }}>FabbroEmergenzaMilano.it</span>
               <span className="logo-accent" style={{ fontSize: '1.5rem' }}>H24</span>
             </div>
             <span style={{ fontSize: '0.65rem', fontWeight: '600', color: '#666', letterSpacing: '0.5px', marginTop: '-2px', textTransform: 'uppercase' }}>

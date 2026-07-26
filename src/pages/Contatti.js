@@ -14,7 +14,7 @@ const Contatti = () => {
   return (
     <div className="contatti-page">
       <Helmet>
-        <title>Contatti | Fabbro Milano Pronto Intervento 24h</title>
+        <title>Contatti | FabbroEmergenzaMilano.it Pronto Intervento 24h</title>
         <meta name="description" content="Contatta Mastro Nello per un pronto intervento fabbro a Milano e provincia. Siamo disponibili 24h su 24 per emergenze, apertura porte e preventivi gratuiti." />
       </Helmet>
 

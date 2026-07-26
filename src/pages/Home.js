@@ -39,7 +39,7 @@ const Home = () => {
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "EmergencyService",
-    "name": "Carratu'Aniello Fabbro Milano",
+    "name": "Carratu'Aniello FabbroEmergenzaMilano.it",
     "image": `${process.env.PUBLIC_URL}/images/logoNuovo.png`,
     "telephone": "+393923842491",
     "url": "https://nicolamaraschi.github.io/website-client-ferramenta",
@@ -223,7 +223,7 @@ const Home = () => {
   return (
     <div className="home-page">
       <Helmet>
-        <title>Fabbro Milano Pronto Intervento 24h | Apertura Porte Urgente</title>
+        <title>FabbroEmergenzaMilano.it Pronto Intervento 24h | Apertura Porte Urgente</title>
         <meta name="description" content="Cerchi un fabbro urgente a Milano? Mastro Nello interviene in 30 min. Pronto Intervento 24h per apertura porte, serrature bloccate e tapparelle." />
         <link rel="canonical" href="https://nicolamaraschi.github.io/website-client-ferramenta" />
         <meta name="keywords" content="fabbro milano, pronto intervento fabbro, fabbro urgente milano, apertura porte milano, cambio serratura, fabbro 24h milano, sos fabbro" />
@@ -246,7 +246,7 @@ const Home = () => {
             <h1>Pronto Intervento Fabbro <br /> Milano e Provincia</h1>
             <p>Emergenza Fabbro 24h? Interveniamo in tutta Milano per apertura porte bloccate, cambio serrature e riparazioni urgenti.</p>
             <div className="hero-cta">
-              <a href="tel:+393923842491" className="btn-primary" title="Chiama Subito Fabbro Milano">Chiama Ora: 392 3842491</a>
+              <a href="tel:+393923842491" className="btn-primary" title="Chiama Subito FabbroEmergenzaMilano.it">Chiama Ora: 392 3842491</a>
               <Link to="/preventivo" className="btn-secondary">Richiedi Preventivo</Link>
             </div>
           </div>
@@ -299,7 +299,7 @@ const Home = () => {
             </div>
 
             <div className="intro-image">
-              <img src={`${process.env.PUBLIC_URL}/images/logoNuovo.png`} alt="Mastro Nello - Fabbro Milano Pronto Intervento 24h" />
+              <img src={`${process.env.PUBLIC_URL}/images/logoNuovo.png`} alt="Mastro Nello - FabbroEmergenzaMilano.it Pronto Intervento 24h" />
               <div className="intro-badge">
                 <span className="years">30+</span>
                 <span className="text">Anni di<br />Esperienza</span>
