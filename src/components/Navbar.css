@@ -343,3 +343,49 @@
     padding: 70px 15px 30px;
   }
 }
+/* Additions for new logo classes and mobile responsiveness */
+.logo-main-text {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.navbar-logo .logo-text {
+  font-size: 1.5rem;
+}
+.navbar-logo .logo-accent {
+  font-size: 1.5rem;
+  margin-left: 4px;
+}
+.navbar-logo .logo-subtext {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-top: -2px;
+  text-transform: uppercase;
+}
+
+/* Ensure the long text fits without overflowing */
+.navbar-logo .logo-text {
+  font-size: clamp(0.7rem, 4vw, 1.5rem);
+  white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+  .navbar-logo .logo-text {
+    font-size: clamp(0.8rem, 4.5vw, 1.2rem);
+  }
+  .navbar-logo .logo-subtext {
+    font-size: 0.55rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar-logo .logo-text {
+    font-size: 0.85rem;
+  }
+  .navbar-logo .logo-subtext {
+    font-size: 0.5rem;
+  }
+}
+

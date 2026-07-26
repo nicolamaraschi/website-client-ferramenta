@@ -9,7 +9,6 @@ const Footer = () => {
           <div className="footer-brand">
             <div className="footer-logo">
               <span className="logo-text">FabbroEmergenzaMilano.it</span>
-              <span className="logo-accent">H24</span>
             </div>
             <p className="brand-description" style={{ marginBottom: '10px' }}>
               di Carratu' Aniello

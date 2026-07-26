@@ -208,3 +208,26 @@
     font-size: 1.8rem;
   }
 }
+.footer-logo .logo-text {
+  font-size: clamp(0.7rem, 4.5vw, 2rem);
+  white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+  .footer-logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+  }
+  .footer-logo .logo-text {
+    font-size: clamp(0.8rem, 5vw, 1.2rem);
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-logo .logo-text {
+    font-size: 0.9rem;
+  }
+}
+

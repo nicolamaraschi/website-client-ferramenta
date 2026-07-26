@@ -37,11 +37,10 @@ const Navbar = () => {
       <div className="navbar-container">
         <Link to="/main" className="navbar-logo" style={{ textDecoration: 'none' }}>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div>
-              <span className="logo-text" style={{ fontSize: '1.5rem' }}>FabbroEmergenzaMilano.it</span>
-              <span className="logo-accent" style={{ fontSize: '1.5rem' }}>H24</span>
+            <div className="logo-main-text">
+              <span className="logo-text">FabbroEmergenzaMilano.it</span>
             </div>
-            <span style={{ fontSize: '0.65rem', fontWeight: '600', color: '#666', letterSpacing: '0.5px', marginTop: '-2px', textTransform: 'uppercase' }}>
+            <span className="logo-subtext">
               di Carratu' Aniello
             </span>
           </div>
