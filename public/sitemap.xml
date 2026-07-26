@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nicolamaraschi.github.io/website-client-ferramenta/</loc>
+    <loc>https://www.fabbroemergenzamilano.it/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nicolamaraschi.github.io/website-client-ferramenta/#/main</loc>
+    <loc>https://www.fabbroemergenzamilano.it/main</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nicolamaraschi.github.io/website-client-ferramenta/#/servizi</loc>
+    <loc>https://www.fabbroemergenzamilano.it/servizi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nicolamaraschi.github.io/website-client-ferramenta/#/lavori</loc>
+    <loc>https://www.fabbroemergenzamilano.it/lavori</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nicolamaraschi.github.io/website-client-ferramenta/#/contatti</loc>
+    <loc>https://www.fabbroemergenzamilano.it/contatti</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nicolamaraschi.github.io/website-client-ferramenta/#/preventivo</loc>
+    <loc>https://www.fabbroemergenzamilano.it/preventivo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

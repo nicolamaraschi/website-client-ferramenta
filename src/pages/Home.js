@@ -42,7 +42,7 @@ const Home = () => {
     "name": "Carratu'Aniello FabbroEmergenzaMilano.it",
     "image": `${process.env.PUBLIC_URL}/images/logoNuovo.png`,
     "telephone": "+393923842491",
-    "url": "https://nicolamaraschi.github.io/website-client-ferramenta",
+    "url": "https://www.fabbroemergenzamilano.it",
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": 45.4642,
@@ -225,14 +225,14 @@ const Home = () => {
       <Helmet>
         <title>FabbroEmergenzaMilano.it Pronto Intervento 24h | Apertura Porte Urgente</title>
         <meta name="description" content="Cerchi un fabbro urgente a Milano? Mastro Nello interviene in 30 min. Pronto Intervento 24h per apertura porte, serrature bloccate e tapparelle." />
-        <link rel="canonical" href="https://nicolamaraschi.github.io/website-client-ferramenta" />
+        <link rel="canonical" href="https://www.fabbroemergenzamilano.it/main" />
         <meta name="keywords" content="fabbro milano, pronto intervento fabbro, fabbro urgente milano, apertura porte milano, cambio serratura, fabbro 24h milano, sos fabbro" />
+        
+        {/* JSON-LD Schema for SEO */}
+        <script type="application/ld+json">
+          {JSON.stringify(schemaMarkup)}
+        </script>
       </Helmet>
-
-      {/* JSON-LD Schema for SEO */}
-      <script type="application/ld+json">
-        {JSON.stringify(schemaMarkup)}
-      </script>
 
       {/* Hero section */}
       <section className="hero-section" ref={heroRef}>
