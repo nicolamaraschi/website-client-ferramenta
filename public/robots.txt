@@ -3,3 +3,4 @@ User-agent: *
 Disallow:
 
 Sitemap: https://www.fabbroemergenzamilano.it/sitemap.xml
+Sitemap: https://www.fabbroemergenzamilano.it/main/sitemap.xml
